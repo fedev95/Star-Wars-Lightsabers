@@ -1,0 +1,45 @@
+---
+import Hilt from "../components/kenobi/KenobiHilt.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Obi-Wan Kenobi ANH Lightsaber">
+  <main>
+    <div id="lightsaber-container">
+      <div id="hilt-container">
+        <Hilt />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #lightsaber-container {
+    height: 75vh;
+    display: flex;
+    align-items: end;
+  }
+
+  #hilt-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+  }
+
+  @media (min-width: 650px) {
+    #lightsaber-container {
+      /* height: 80vw;
+      rotate: 90deg; */
+    }
+  }
+</style>
