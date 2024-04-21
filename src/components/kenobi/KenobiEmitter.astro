@@ -1,11 +1,62 @@
 <section>
-  
+  <div class="emitter-top">
+    <div></div>
+    <div></div>
+  </div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </section>
 
 <style>
   section {
     height: 11.07%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(199, 177, 82);
+  }
+
+  section div:nth-child(1) {
+    height: 6.45%;
+    width: 100%;
+  }
+
+  section div:nth-child(2) {
+    height: 16.13%;
+    width: 77.36%;
+    background-color: rgb(47, 61, 92);
+  }
+
+  section div:nth-child(3) {
+    height: 45.16%;
+    width: 71.7%;
+    background-color: rgb(47, 61, 92);
+  }
+
+  section div:nth-child(4) {
+    height: 9.68%;
+    width: 71.7%;
+    background-color: rgb(47, 61, 92);
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  }
+
+  section div:nth-child(5) {
+    height: 22.58%;
+    width: 54.72%;
+    background-color: rgb(47, 61, 92);
+  }
+
+  .emitter-top div:nth-child(1) {
+    height: 30%;
+    background-color: rgb(47, 61, 92);
+  }
+
+  .emitter-top div:nth-child(2) {
+    height: 70%;
+    width: 100%;
+    background-color: rgb(47, 61, 92);
+    clip-path: polygon(0 0, 100% 0, 88.68% 100%, 11.32% 100%);
   }
 </style>
