@@ -4,7 +4,8 @@ let rows = ["", "", "", "", "", "", "", "", ""];
 
 <section>
   <div class="grenade-container"></div>
-  <div class="grenade-top"></div>
+  <div class="grenade-top-1"></div>
+  <div class="grenade-top-2"></div>
   {
     rows.map(() => (
       <div class="row">
@@ -40,11 +41,18 @@ let rows = ["", "", "", "", "", "", "", "", ""];
     background-color: rgb(70, 77, 148);
   }
 
-  .grenade-top {
-    height: 10.84%;
+  .grenade-top-1 {
+    height: 8.43%;
     width: 71.7%;
     background-color: rgb(70, 77, 148);
-    clip-path: polygon(10% 0, 90% 0, 100% 75%, 90% 100%, 10% 100%, 0 75%);
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+  }
+
+  .grenade-top-2 {
+    height: 2.41%;
+    width: 71.7%;
+    background-color: rgb(70, 77, 148);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   }
 
   .grenade-bot {
@@ -86,12 +94,12 @@ let rows = ["", "", "", "", "", "", "", "", ""];
     background-color: rgb(117, 141, 163);
   }
 
-  section > div:nth-child(3) > div > div:nth-child(2) {
+  section > div:nth-child(4) > div > div:nth-child(2) {
     width: 36.84%;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   }
 
-  section > div:nth-child(11) > div > div:nth-child(2) {
+  section > div:nth-child(12) > div > div:nth-child(2) {
     width: 36.84%;
     clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
   }
