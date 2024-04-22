@@ -1,9 +1,170 @@
-<section></section>
+<section>
+  <div class="clamp-container">
+    <div class="control-box">
+      <div class="control-box-edge"></div>
+      <div class="control-box-lever"></div>
+    </div>
+    <div class="bubbles">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="clamp-details">
+      <div class="details-row">
+        <div class="line-vent"></div>
+        <div class="square-vent"></div>
+        <div class="lines">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div></div>
+      <div class="details-row">
+        <div></div>
+        <div class="square-vent"></div>
+        <div class="lines">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <style>
+  .clamp-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  .clamp-details > div:nth-child(2) {
+    background-image: url(graflex.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30%;
+    width: 50%;
+  }
+
+  .details-row {
+    display: flex;
+    gap: 4%;
+    width: 100%;
+    height: 12%;
+  }
+
+  .clamp-details > div:nth-child(1) {
+    margin-top: 23%;
+  }
+
+  .clamp-details > div:nth-child(3) {
+    margin-bottom: 23%;
+  }
+
+  .details-row > div:nth-child(1),
+  .details-row > div:nth-child(3) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .line-vent {
+    position: relative;
+  }
+
+  .line-vent::before {
+    content: "";
+    right: 0;
+    bottom: -40%;
+    position: absolute;
+    height: 45%;
+    width: 90%;
+    background-color: rgb(87, 54, 62);
+    border-radius: 9999px;
+  }
+
+  .lines > div {
+    background-color: rgb(87, 54, 62);
+    height: 14.28%;
+  }
+
+  .square-vent {
+    border-radius: 10%;
+    height: 100%;
+    min-width: 10%;
+    background-color: rgb(87, 54, 62);
+  }
+
   section {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 18%;
     background-color: darkseagreen;
+  }
+
+  .clamp-container {
+    width: 75.47%;
+    height: 100%;
+    background-color: rgb(138, 90, 102);
+    position: relative;
+  }
+
+  .control-box {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3%;
+    left: -30%;
+    background-color: rgb(87, 54, 62);
+    z-index: 1;
+  }
+
+  .control-box-edge {
+    width: 26.67%;
+    height: 100%;
+    background-color: rgb(180, 142, 99);
+  }
+
+  .control-box-lever {
+    width: 50%;
+    height: 58.82%;
+    border-radius: 0 0 9999px 9999px;
+    background-color: rgb(180, 142, 99);
+    translate: 0 80%;
+  }
+
+  .bubbles {
+    position: absolute;
+    width: 39%;
+    height: 100%;
+    left: -34%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .bubbles > div {
+    height: 11.76%;
+    aspect-ratio: 1/1;
+    background-color: crimson;
+    border-radius: 50%;
   }
 </style>
