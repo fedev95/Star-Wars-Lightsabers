@@ -9,9 +9,9 @@ let rows = ["", "", "", "", "", "", "", "", ""];
     rows.map(() => (
       <div class="row">
         <div class="row-grid">
-          <div></div>
-          <div></div>
-          <div></div>
+          <div />
+          <div />
+          <div />
         </div>
       </div>
     ))
@@ -84,5 +84,15 @@ let rows = ["", "", "", "", "", "", "", "", ""];
     height: 100%;
     width: 28.95%;
     background-color: rgb(117, 141, 163);
+  }
+
+  section > div:nth-child(3) > div > div:nth-child(2) {
+    width: 36.84%;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  }
+
+  section > div:nth-child(11) > div > div:nth-child(2) {
+    width: 36.84%;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
   }
 </style>
