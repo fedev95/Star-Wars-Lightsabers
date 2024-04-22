@@ -1,9 +1,163 @@
-<section></section>
+<section>
+  <div class="div-1"></div>
+  <div class="div-2"></div>
+
+  <div class="div-3">
+    <div></div>
+    <div class="inner-squares">
+      <div class="square-1">
+        <div></div>
+      </div>
+      <div class="square-2">
+        <div></div>
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="div-4"></div>
+  <div class="div-5"></div>
+</section>
 
 <style>
   section {
     width: 100%;
     height: 12.4%;
     background-color: rgba(240, 230, 140, 0.575);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .div-1 {
+    background-color: rgb(186, 122, 238);
+    width: 71.7%;
+    height: 11.43%;
+    border-top-left-radius: 3% 40%;
+    border-top-right-radius: 3% 40%;
+  }
+
+  .div-2 {
+    background-color: rgb(186, 122, 238);
+    width: 75.47%;
+    height: 5.71%;
+    border-top-left-radius: 3% 50%;
+    border-top-right-radius: 3% 50%;
+  }
+
+  .div-3 {
+    width: 90.57%;
+    height: 62.86%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .div-3 > div:nth-child(1) {
+    background-color: rgb(138, 78, 187);
+    height: 100%;
+    min-width: 8.33%;
+    clip-path: polygon(0 18.18%, 100% 0, 100% 100%, 0 72.73%);
+  }
+
+  /* ================================================ */
+
+  .inner-squares {
+    width: 83.33%;
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    background-color: rgb(186, 122, 238);
+  }
+
+  .inner-squares > div {
+    width: 30%;
+    position: relative;
+    height: 100%;
+    background-color: rgb(138, 78, 187);
+  }
+
+  .square-1 > div {
+    left: -10%;
+  }
+
+  .square-1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 110%;
+    height: 18.18%;
+    background-color: rgb(216, 189, 67);
+    clip-path: polygon(10% 0, 100% 0, 70% 100%, 0 100%);
+  }
+
+  .square-1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+    width: 110%;
+    height: 27.27%;
+    background-color: rgb(216, 189, 67);
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 10% 100%);
+  }
+
+  .square-2 > div {
+    right: -10%;
+  }
+
+  .square-2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 110%;
+    height: 18.18%;
+    background-color: rgb(216, 189, 67);
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 30% 100%);
+  }
+
+  .square-2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    width: 110%;
+    height: 27.27%;
+    background-color: rgb(216, 189, 67);
+    clip-path: polygon(30% 0, 100% 0, 90% 100%, 0 100%);
+  }
+
+  .inner-squares > div > div {
+    width: 80%;
+    height: 54.55%;
+    top: 18.18%;
+    position: absolute;
+    background-color: rgb(216, 189, 67);
+  }
+
+  /* ================================================ */
+
+  .div-3 > div:nth-child(3) {
+    background-color: rgb(138, 78, 187);
+    height: 100%;
+    min-width: 8.33%;
+    clip-path: polygon(0 0, 100% 18.18%, 100% 72.73%, 0 100%);
+  }
+
+  .div-4 {
+    background-color: rgb(186, 122, 238);
+    width: 71.7%;
+    height: 5.71%;
+  }
+
+  .div-5 {
+    background-color: rgb(186, 122, 238);
+    height: 14.29%;
+    width: 75.47%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 20% 50%;
+    border-bottom-right-radius: 20% 50%;
   }
 </style>
