@@ -1,4 +1,5 @@
 ---
+import KenobiBlade from "./KenobiBlade.astro";
 import KenobiBooster from "./KenobiBooster.astro";
 import KenobiClamp from "./KenobiClamp.astro";
 import KenobiEmitter from "./KenobiEmitter.astro";
@@ -8,6 +9,8 @@ import KenobiPommel from "./KenobiPommel.astro";
 ---
 
 <div id="hilt" class="hilt">
+  <button id="power-btn" autofocus></button>
+  <KenobiBlade />
   <KenobiEmitter />
   <KenobiNeck />
   <KenobiGrenade />
@@ -24,23 +27,14 @@ import KenobiPommel from "./KenobiPommel.astro";
     aspect-ratio: 51/275;
     transition: 0.5s;
   }
+
+  #power-btn {
+    position: absolute;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    inset: 0;
+    z-index: 10;
+    opacity: 0;
+  }
 </style>
-
-<script>
-  let btn = document.getElementById("btn");
-  let hilt = document.getElementById("hilt");
-  let lightsaberContainer = document.getElementById("lightsaber-container");
-  let hiltContainer = document.getElementById("hilt-container");
-
-  btn?.addEventListener("click", () => {
-    console.log("btn");
-  });
-
-  document.addEventListener("wheel", (event) => {
-    if (event.deltaY < 0) {
-      hiltContainer!.style.height = "100%";
-    } else {
-      hiltContainer!.style.height = "23.73%";
-    }
-  });
-</script>
