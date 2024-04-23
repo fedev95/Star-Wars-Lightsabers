@@ -1,0 +1,28 @@
+<section id="blade"></section>
+
+<style>
+  #blade {
+    width: 47.92%;
+    height: 0%;
+    bottom: 100%;
+    left: 23.96%;
+    visibility: hidden;
+    position: absolute;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    animation: 0.1s linear infinite flicker;
+    transition-duration: .4s;
+    z-index: -1;
+  }
+
+  @keyframes flicker {
+    0% {
+      background-color: rgb(196, 255, 255);
+      box-shadow: 0px 0px 30px 5px rgb(84, 229, 255);
+    }
+    100% {
+      background-color: rgb(152, 255, 241);
+      box-shadow: 0px 0px 25px 3px rgb(84, 229, 255);
+    }
+  }
+</style>
