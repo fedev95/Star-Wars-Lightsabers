@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Obi-Wan Kenobi ANH Lightsaber">
-  <main>
+  <main id="kenobi-background">
     <div id="lightsaber-container">
       <div id="hilt-container">
         <Hilt />
@@ -16,10 +16,24 @@ import Layout from "../layouts/Layout.astro";
 <style>
   main {
     height: 100vh;
-    background-color: beige;
+    background-color: lightblue;
+    transition-duration: 0.4s;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  main:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
   }
 
   #lightsaber-container {
@@ -38,8 +52,109 @@ import Layout from "../layouts/Layout.astro";
 
   @media (min-width: 650px) {
     #lightsaber-container {
-      /* height: 80vw;
-      rotate: 90deg; */
+      height: 80vw;
+      rotate: 90deg;
     }
   }
 </style>
+
+<script>
+  let powerBtn = document.getElementById("power-btn");
+  let blade = document.getElementById("blade");
+  let hiltContainer = document.getElementById("hilt-container");
+  let kenobiBackground = document.getElementById("kenobi-background");
+  let isLightsaberOn = false;
+  let isZoomIn = true;
+
+  const hum = new Audio("kenobi-font/kenobi-hum.wav");
+  const swing1 = new Audio("kenobi-font/kenobi-swing-1.wav");
+  const swing2 = new Audio("kenobi-font/kenobi-swing-2.wav");
+  const powerOn = new Audio("kenobi-font/kenobi-poweron.wav");
+  const powerOff = new Audio("kenobi-font/kenobi-poweroff.wav");
+
+  hum.volume = 0.5;
+  swing1.volume = 0.5;
+  swing2.volume = 0.5;
+  powerOn.volume = 0.5;
+  powerOff.volume = 0.5;
+
+  document.addEventListener("click", () => {
+    powerBtn?.focus();
+  });
+
+  powerBtn?.addEventListener("click", handleLightsaber);
+
+  document.addEventListener("wheel", (event) => {
+    if (event.deltaY < 0) {
+      zoomIn();
+    } else {
+      zoomOut();
+    }
+  });
+
+  function handleLightsaber() {
+    if (isLightsaberOn) {
+      powerOffSound();
+      powerOffBlade();
+      isLightsaberOn = false;
+    } else {
+      powerOnSound();
+      powerOnBlade();
+      isLightsaberOn = true;
+    }
+  }
+
+  function zoomIn() {
+    if (!isZoomIn) {
+      isZoomIn = true;
+      hiltContainer!.style.height = "100%";
+      if (isLightsaberOn) {
+        swing2.play();
+      }
+    }
+  }
+
+  function zoomOut() {
+    if (isZoomIn) {
+      isZoomIn = false;
+      hiltContainer!.style.height = "23.73%";
+      if (isLightsaberOn) {
+        swing1.play();
+      }
+    }
+  }
+
+  function powerOffSound() {
+    powerOff.play();
+    hum.pause();
+    hum.currentTime = 0;
+    powerOn.pause();
+    powerOn.currentTime = 0;
+  }
+
+  function powerOnSound() {
+    hum.play();
+    powerOn.play();
+    hum.addEventListener("timeupdate", () => {
+      const buffer = 1.5;
+      if (hum.currentTime > hum.duration - buffer) {
+        hum.currentTime = 0;
+        if (isLightsaberOn) {
+          hum.play();
+        }
+      }
+    });
+  }
+
+  function powerOffBlade() {
+    blade!.style.height = "0%";
+    blade!.style.visibility = "hidden";
+    kenobiBackground!.style.background = "lightblue";
+  }
+
+  function powerOnBlade() {
+    blade!.style.height = "321%";
+    blade!.style.visibility = "visible";
+    kenobiBackground!.style.background = "rgb(152, 255, 241)";
+  }
+</script>
