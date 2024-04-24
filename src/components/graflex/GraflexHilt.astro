@@ -1,0 +1,36 @@
+---
+import GraflexBlade from "./GraflexBlade.astro";
+import GraflexClamp from "./GraflexClamp.astro";
+import GraflexEmitter from "./GraflexEmitter.astro";
+import GraflexGrips from "./GraflexGrips.astro";
+import GraflexUpper from "./GraflexUpper.astro";
+---
+
+<div id="hilt" class="hilt">
+  <button id="power-btn" autofocus></button>
+  <GraflexBlade />
+  <GraflexEmitter />
+  <GraflexUpper />
+  <GraflexClamp />
+  <GraflexGrips />
+</div>
+
+<style>
+  .hilt {
+    position: relative;
+    max-height: 265mm;
+    height: 100%;
+    aspect-ratio: 4 / 27;
+    transition: 0.5s;
+  }
+
+  #power-btn {
+    position: absolute;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    inset: 0;
+    z-index: 10;
+    opacity: 0;
+  }
+</style>
