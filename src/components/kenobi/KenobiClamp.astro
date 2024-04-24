@@ -41,6 +41,51 @@
 
 <style>
   section {
+    --clamp-gradient: linear-gradient(
+      90deg,
+      rgb(22, 22, 22) 3%,
+      rgba(77, 74, 74, 1) 6%,
+      rgba(119, 116, 116, 1) 9%,
+      rgb(179, 177, 176) 13%,
+      rgb(197, 200, 201) 23%,
+      rgb(32, 32, 32) 44%,
+      rgb(75, 75, 75) 77%,
+      rgba(150, 159, 163, 1) 82%,
+      rgb(27, 26, 26) 100%
+    );
+
+    --control-box-gradient: linear-gradient(
+      90deg,
+      rgb(241, 241, 241) 0%,
+      rgb(115, 117, 117) 37%,
+      rgb(101, 103, 104) 74%,
+      rgba(66, 66, 66, 1) 92%,
+      rgba(15, 15, 15, 1) 100%
+    );
+
+    --dark-details: rgb(14, 14, 14);
+
+    --lever: linear-gradient(
+      90deg,
+      rgba(220, 223, 226, 1) 0%,
+      rgb(141, 142, 143) 15%,
+      rgb(114, 113, 113) 90%,
+      rgb(54, 54, 54) 85%,
+      rgba(15, 15, 15, 1) 100%
+    );
+
+    --weathered-gradient-1: linear-gradient(
+      0deg,
+      rgba(41, 41, 43, 0) 0%,
+      rgba(41, 41, 43, 0.577468487394958) 25%,
+      rgba(41, 41, 43, 0.5970763305322129) 65%,
+      rgba(41, 41, 43, 0) 84%,
+      rgba(41, 41, 43, 0.47102591036414565) 91%,
+      rgba(0, 0, 0, 0.5) 98%
+    );
+  }
+
+  section {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -54,6 +99,16 @@
     flex-direction: column;
     align-items: end;
     justify-content: space-between;
+    position: relative;
+    background: var(--clamp-gradient);
+  }
+
+  .clamp-details::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    transform: scaleY(-1);
+    background: var(--weathered-gradient-1);
   }
 
   .clamp-details > div:nth-child(2) {
@@ -63,6 +118,7 @@
     background-size: contain;
     height: 30%;
     width: 50%;
+    z-index: 1;
   }
 
   .details-row {
@@ -100,12 +156,15 @@
     position: absolute;
     height: 45%;
     width: 90%;
-    background-color: rgb(87, 54, 62);
+    background: var(--dark-details);
+    /* background-color: rgb(87, 54, 62); */
     border-radius: 9999px;
   }
 
   .lines > div {
-    background-color: rgb(87, 54, 62);
+    background: var(--dark-details);
+    /* background-color: rgb(87, 54, 62); */
+    opacity: 45%;
     height: 14.28%;
   }
 
@@ -113,13 +172,14 @@
     border-radius: 10%;
     height: 100%;
     min-width: 10%;
-    background-color: rgb(87, 54, 62);
+    background: var(--dark-details);
+    /* background-color: rgb(87, 54, 62); */
+    position: relative;
   }
 
   .clamp-container {
     width: 75.47%;
     height: 100%;
-    background-color: rgb(138, 90, 102);
     position: relative;
   }
 
@@ -131,22 +191,36 @@
     justify-content: space-between;
     padding-right: 3%;
     left: -30%;
-    background-color: rgb(87, 54, 62);
+    background: var(--control-box-gradient);
     z-index: 1;
   }
 
   .control-box-edge {
     width: 26.67%;
     height: 100%;
-    background-color: rgb(180, 142, 99);
+    background: var(--control-box-gradient);
   }
 
   .control-box-lever {
     width: 50%;
     height: 58.82%;
     border-radius: 0 0 9999px 9999px;
-    background-color: rgb(180, 142, 99);
+    background: var(--lever);
     translate: 0 80%;
+    position: relative;
+  }
+
+  .control-box-lever::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    border-radius: 0 0 9999px 9999px;
+    background: linear-gradient(
+      180deg,
+      rgba(220, 223, 226, 0) 0%,
+      rgba(66, 66, 66, 0.3) 53%,
+      rgba(15, 15, 15, 0.5) 100%
+    );
   }
 
   .bubbles {
@@ -163,7 +237,13 @@
   .bubbles > div {
     height: 11.76%;
     aspect-ratio: 1/1;
-    background-color: crimson;
+    background: linear-gradient(
+      0deg,
+      rgb(103, 108, 109) 0%,
+      rgba(212, 230, 231, 1) 100%
+    );
     border-radius: 50%;
+    position: relative;
+    overflow: hidden;
   }
 </style>

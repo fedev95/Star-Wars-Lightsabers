@@ -12,6 +12,26 @@
 
 <style>
   section {
+    --dark: rgb(14, 14, 14);
+
+    --weathered-gradient-1: linear-gradient(
+      0deg,
+      rgba(41, 41, 43, 0) 30%,
+      rgba(41, 41, 43, 0.5) 50%,
+      rgba(0, 0, 0, 0.7) 85%
+    );
+
+    --gradient-dark: linear-gradient(
+      90deg,
+      rgba(14, 14, 14, 1) 0%,
+      rgba(29, 29, 29, 1) 5%,
+      rgba(23, 23, 23, 1) 14%,
+      rgba(15, 15, 15, 1) 43%,
+      rgba(15, 15, 15, 1) 100%
+    );
+  }
+
+  section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +42,7 @@
   .main-booster {
     width: 83.02%;
     height: 90.7%;
-    background-color: rgb(59, 93, 109);
+    background: var(--dark);
     border-radius: 7%;
     display: flex;
     justify-content: center;
@@ -30,7 +50,10 @@
 
   .main-booster > div {
     height: 100%;
-    background-color: bisque;
+  }
+
+  .main-booster > div::before {
+    background: var(--dark);
   }
 
   .main-booster > div:nth-child(1) {
@@ -38,6 +61,7 @@
     position: relative;
     border-top-left-radius: 60% 5%;
     border-bottom-left-radius: 60% 5%;
+    background-color: #383636;
   }
 
   .main-booster > div:nth-child(1)::before {
@@ -47,7 +71,6 @@
     width: 80%;
     height: 100%;
     position: absolute;
-    background-color: rgb(59, 93, 109);
     border-top-left-radius: 50% 7%;
     border-bottom-left-radius: 50% 7%;
   }
@@ -57,6 +80,7 @@
     position: relative;
     border-top-left-radius: 30% 10%;
     border-bottom-left-radius: 30% 10%;
+    background-color: #413f3f;
   }
 
   .main-booster > div:nth-child(2)::before {
@@ -66,7 +90,6 @@
     width: 75%;
     height: 100%;
     position: absolute;
-    background-color: rgb(59, 93, 109);
     border-top-left-radius: 30% 7%;
     border-bottom-left-radius: 30% 7%;
   }
@@ -76,6 +99,7 @@
     position: relative;
     border-top-left-radius: 15% 10%;
     border-bottom-left-radius: 15% 10%;
+    background-color: #2b2929;
   }
 
   .main-booster > div:nth-child(3)::before {
@@ -85,7 +109,6 @@
     width: 77%;
     height: 100%;
     position: absolute;
-    background-color: rgb(59, 93, 109);
     border-top-left-radius: 15% 7%;
     border-bottom-left-radius: 15% 7%;
   }
@@ -98,7 +121,7 @@
     width: 30%;
     height: 100%;
     position: absolute;
-    background-color: rgb(204, 157, 99);
+    background-color: #1c1c1c;
   }
 
   .main-booster > div:nth-child(4) {
@@ -106,6 +129,7 @@
     position: relative;
     border-top-right-radius: 15% 10%;
     border-bottom-right-radius: 15% 10%;
+    background-color: #131313;
   }
 
   .main-booster > div:nth-child(4)::before {
@@ -115,7 +139,6 @@
     width: 77%;
     height: 100%;
     position: absolute;
-    background-color: rgb(59, 93, 109);
     border-top-right-radius: 15% 7%;
     border-bottom-right-radius: 15% 7%;
   }
@@ -125,6 +148,7 @@
     position: relative;
     border-top-right-radius: 30% 10%;
     border-bottom-right-radius: 30% 10%;
+    background-color: #111111;
   }
 
   .main-booster > div:nth-child(5)::before {
@@ -134,7 +158,6 @@
     width: 75%;
     height: 100%;
     position: absolute;
-    background-color: rgb(59, 93, 109);
     border-top-right-radius: 30% 7%;
     border-bottom-right-radius: 30% 7%;
   }
@@ -144,6 +167,7 @@
     position: relative;
     border-top-right-radius: 60% 5%;
     border-bottom-right-radius: 60% 5%;
+    background-color: #0e0e0e;
   }
 
   .main-booster > div:nth-child(6)::before {
@@ -153,7 +177,6 @@
     width: 80%;
     height: 100%;
     position: absolute;
-    background-color: rgb(59, 93, 109);
     border-top-right-radius: 50% 7%;
     border-bottom-right-radius: 50% 7%;
   }
@@ -162,26 +185,23 @@
   .main-booster > div:nth-child(6) {
     width: 12.66%;
     height: 100%;
-    background-color: rgb(204, 157, 99);
   }
 
   .main-booster > div:nth-child(2),
   .main-booster > div:nth-child(5) {
     width: 14.66%;
     height: 100%;
-    background-color: rgb(204, 157, 99);
   }
 
   .main-booster > div:nth-child(3),
   .main-booster > div:nth-child(4) {
     width: 22.68%;
     height: 100%;
-    background-color: rgb(204, 157, 99);
   }
 
   .booster-bot {
     height: 9.3%;
     width: 62.26%;
-    background-color: rgb(59, 93, 109);
+    background: var(--gradient-dark);
   }
 </style>

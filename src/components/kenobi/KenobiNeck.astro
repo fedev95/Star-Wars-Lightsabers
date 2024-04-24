@@ -13,6 +13,41 @@
 
 <style>
   section {
+    --gold-gradient: linear-gradient(
+      90deg,
+      rgba(80, 57, 25, 1) 0%,
+      rgba(153, 116, 65, 1) 21%,
+      rgb(212, 186, 150) 39%,
+      rgba(120, 88, 46, 1) 73%,
+      rgba(48, 38, 29, 1) 97%
+    );
+
+    --gold-gradient-2: linear-gradient(
+      90deg,
+      rgb(114, 87, 48) 0%,
+      rgba(180, 146, 99, 1) 21%,
+      rgba(171, 138, 92, 1) 29%,
+      rgba(128, 97, 54, 1) 39%,
+      rgba(55, 38, 17, 1) 73%,
+      rgba(28, 21, 15, 1) 97%
+    );
+
+    --weathered-gradient-1: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(36, 36, 36, 0.5) 50%,
+      rgba(0, 0, 0, 0.7) 75%
+    );
+
+    --weathered-gradient-2: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(22, 22, 22, 0.5) 50%,
+      rgba(0, 0, 0, 0.7) 85%
+    );
+  }
+
+  section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,50 +66,123 @@
   .div2 {
     width: 71.7%;
     height: 20.51%;
-    background-color: rgb(184, 103, 11);
+    position: relative;
+    background: var(--gold-gradient-2);
+    /* background-color: rgb(184, 103, 11); */
+  }
+
+  .div2::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: var(--weathered-gradient-2);
   }
 
   .div3 {
     width: 77.36%;
     height: 7.69%;
-    background-color: rgb(184, 103, 11);
+    position: relative;
+    background: var(--gold-gradient-2);
+    /* background-color: rgb(184, 103, 11); */
+
     clip-path: polygon(7% 0, 93% 0, 100% 100%, 0 100%);
+  }
+
+  .div3::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: var(--weathered-gradient-1);
   }
 
   .div4 {
     width: 35.85%;
     height: 15.38%;
-    background-color: rgb(184, 103, 11);
+    position: relative;
+    background: var(--gold-gradient-2);
+    /* background-color: rgb(184, 103, 11); */
+  }
+
+  .div4::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: var(--weathered-gradient-1);
   }
 
   .div5 {
     width: 35.85%;
     height: 5.13%;
-    background-color: rgb(184, 103, 11);
+    background: var(--gold-gradient-2);
+    /* background-color: rgb(184, 103, 11); */
+
     clip-path: polygon(0 0, 100% 0, 89.5% 100%, 10.5% 100%);
+  }
+
+  .div5::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: rgba(15, 15, 15, 0.8);
   }
 
   .div6 {
     width: 28.3%;
     height: 28.21%;
-    background-color: rgb(184, 103, 11);
+    position: relative;
+    background: var(--gold-gradient-2);
+    /* background-color: rgb(184, 103, 11); */
+  }
+
+  .div6::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: var(--weathered-gradient-2);
   }
 
   .div1 div:nth-child(1) {
     width: 100%;
     height: 38.89%;
-    background-color: rgb(184, 103, 11);
+    position: relative;
+    background: var(--gold-gradient);
+    /* background-color: rgb(184, 103, 11); */
+  }
+
+  .div1 div:nth-child(1)::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: var(--weathered-gradient-1);
   }
 
   .div1 div:nth-child(2) {
     width: 88.24%;
     height: 22.22%;
-    background-color: rgb(184, 103, 11);
+    position: relative;
+    background: var(--gold-gradient);
+    /* background-color: rgb(184, 103, 11); */
+  }
+
+  .div1 div:nth-child(2)::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: rgba(22, 22, 22, 0.7);
   }
 
   .div1 div:nth-child(3) {
     width: 100%;
     height: 38.89%;
-    background-color: rgb(184, 103, 11);
+    position: relative;
+    background: var(--gold-gradient);
+    /* background-color: rgb(184, 103, 11); */
+  }
+
+  .div1 div:nth-child(3)::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: var(--weathered-gradient-2);
   }
 </style>

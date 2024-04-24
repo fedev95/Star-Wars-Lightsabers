@@ -1,7 +1,6 @@
 <section>
   <div class="div-1"></div>
   <div class="div-2"></div>
-
   <div class="div-3">
     <div></div>
     <div class="inner-squares">
@@ -21,6 +20,27 @@
 
 <style>
   section {
+    --pommel-gradient: linear-gradient(
+      90deg,
+      rgb(100, 98, 98) 0%,
+      rgb(170, 167, 167) 9%,
+      rgb(179, 177, 176) 13%,
+      rgb(197, 200, 201) 23%,
+      rgb(32, 32, 32) 44%,
+      rgb(75, 75, 75) 77%,
+      rgba(150, 159, 163, 1) 82%,
+      rgb(27, 26, 26) 100%
+    );
+
+    --weathered-gradient-1: linear-gradient(
+      0deg,
+      rgba(41, 41, 43, 0) 30%,
+      rgba(41, 41, 43, 0.5) 50%,
+      rgba(0, 0, 0, 0.7) 85%
+    );
+  }
+
+  section {
     width: 100%;
     height: 12.4%;
     display: flex;
@@ -29,19 +49,40 @@
   }
 
   .div-1 {
-    background-color: rgb(186, 122, 238);
+    /* background-color: rgb(186, 122, 238); */
+    background: var(--pommel-gradient);
     width: 71.7%;
     height: 11.43%;
     border-top-left-radius: 3% 40%;
     border-top-right-radius: 3% 40%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .div-1::before {
+    position: absolute;
+    transform: scaleY(-1);
+    content: "";
+    inset: 0;
+    background: var(--weathered-gradient-1);
   }
 
   .div-2 {
-    background-color: rgb(186, 122, 238);
+    /* background-color: rgb(186, 122, 238); */
+    background: var(--pommel-gradient);
     width: 75.47%;
     height: 5.71%;
     border-top-left-radius: 3% 50%;
     border-top-right-radius: 3% 50%;
+    position: relative;
+  }
+
+  .div-2::before {
+    position: absolute;
+    transform: scaleY(-1);
+    content: "";
+    inset: 0;
+    background: var(--weathered-gradient-1);
   }
 
   .div-3 {
@@ -52,7 +93,11 @@
   }
 
   .div-3 > div:nth-child(1) {
-    background-color: rgb(138, 78, 187);
+    background: linear-gradient(
+      90deg,
+      rgba(220, 223, 226, 1) 0%,
+      rgba(66, 66, 66, 1) 100%
+    );
     height: 100%;
     min-width: 8.33%;
     clip-path: polygon(0 18.18%, 100% 0, 100% 100%, 0 72.73%);
@@ -65,14 +110,16 @@
     display: flex;
     justify-content: center;
     gap: 20%;
-    background-color: rgb(186, 122, 238);
+    /* background-color: rgb(186, 122, 238); */
+    background: var(--pommel-gradient);
   }
 
   .inner-squares > div {
     width: 30%;
     position: relative;
     height: 100%;
-    background-color: rgb(138, 78, 187);
+    /* background-color: rgb(138, 78, 187); */
+    background: rgb(32, 32, 32);
   }
 
   .square-1 > div {
@@ -86,7 +133,12 @@
     left: -10%;
     width: 110%;
     height: 18.18%;
-    background-color: rgb(216, 189, 67);
+    /* background-color: rgb(216, 189, 67); */
+    background: linear-gradient(
+      90deg,
+      rgba(220, 223, 226, 1) 0%,
+      rgba(66, 66, 66, 1) 100%
+    );
     clip-path: polygon(10% 0, 100% 0, 70% 100%, 0 100%);
   }
 
@@ -97,12 +149,18 @@
     left: -10%;
     width: 110%;
     height: 27.27%;
-    background-color: rgb(216, 189, 67);
+    /* background-color: rgb(216, 189, 67); */
+    background: linear-gradient(
+      295deg,
+      rgb(49, 49, 49) 0%,
+      rgba(97, 98, 98, 1) 100%
+    );
     clip-path: polygon(0 0, 70% 0, 100% 100%, 10% 100%);
   }
 
   .square-2 > div {
     right: -10%;
+    transform: scaleX(-1);
   }
 
   .square-2:before {
@@ -112,7 +170,12 @@
     right: -10%;
     width: 110%;
     height: 18.18%;
-    background-color: rgb(216, 189, 67);
+    /* background-color: rgb(216, 189, 67); */
+    background: linear-gradient(
+      149deg,
+      rgba(58, 58, 58, 1) 0%,
+      rgba(144, 153, 157, 1) 100%
+    );
     clip-path: polygon(0 0, 90% 0, 100% 100%, 30% 100%);
   }
 
@@ -123,7 +186,11 @@
     right: -10%;
     width: 110%;
     height: 27.27%;
-    background-color: rgb(216, 189, 67);
+    background: linear-gradient(
+      149deg,
+      rgba(32, 32, 32, 1) 0%,
+      rgba(61, 62, 62, 1) 100%
+    );
     clip-path: polygon(30% 0, 100% 0, 90% 100%, 0 100%);
   }
 
@@ -132,31 +199,55 @@
     height: 54.55%;
     top: 18.18%;
     position: absolute;
-    background-color: rgb(216, 189, 67);
+    /* background-color: rgb(216, 189, 67); */
+    background: var(--pommel-gradient);
   }
 
   /* ================================================ */
 
   .div-3 > div:nth-child(3) {
-    background-color: rgb(138, 78, 187);
+    background: linear-gradient(
+      90deg,
+      rgba(24, 24, 24, 1) 0%,
+      rgba(121, 122, 122, 1) 100%
+    );
     height: 100%;
     min-width: 8.33%;
     clip-path: polygon(0 0, 100% 18.18%, 100% 72.73%, 0 100%);
   }
 
   .div-4 {
-    background-color: rgb(186, 122, 238);
+    /* background-color: rgb(186, 122, 238); */
+    background: var(--pommel-gradient);
     width: 71.7%;
     height: 5.71%;
+    position: relative;
+  }
+
+  .div-4::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .div-5 {
-    background-color: rgb(186, 122, 238);
+    /* background-color: rgb(186, 122, 238); */
+    background: var(--pommel-gradient);
     height: 14.29%;
     width: 75.47%;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
     border-bottom-left-radius: 20% 50%;
     border-bottom-right-radius: 20% 50%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .div-5::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: var(--weathered-gradient-1);
   }
 </style>
