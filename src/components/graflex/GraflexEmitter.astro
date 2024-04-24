@@ -1,0 +1,148 @@
+<section>
+  <div class="emitter-container">
+    <div class="bunny-ears-container">
+      <div>
+        <div class="bunny-ears"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="emitter-s-shape"></div>
+    <div class="emitter-mid">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="emitter-bot"></div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 13.7%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .emitter-container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    position: relative;
+    gap: 8.11%;
+    z-index: 2;
+  }
+
+  .bunny-ears-container {
+    position: absolute;
+    height: 43.24%;
+    width: 63.16%;
+    left: -63.16%;
+    bottom: 20.27%;
+  }
+
+  .bunny-ears-container > div:nth-child(1) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bunny-ears {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    background-color: rgb(19, 52, 82);
+    border-radius: 9999px 0 0 9999px;
+    clip-path: polygon(
+      68% 9%,
+      100% 9%,
+      100% 100%,
+      68% 100%,
+      68% 88%,
+      60% 88%,
+      60% 100%,
+      0 100%,
+      0 0,
+      57% 0,
+      64% 18%,
+      68% 18%
+    );
+  }
+
+  .bunny-ears-container > div:nth-child(1) > div:nth-child(2) {
+    width: 32%;
+    height: 100%;
+    top: 4%;
+    position: absolute;
+    background-color: cornflowerblue;
+    right: 0;
+    z-index: 3;
+  }
+
+  .bunny-ears-container > div:nth-child(1) > div:nth-child(3) {
+    width: 22.4%;
+    aspect-ratio: 1;
+    top: -10%;
+    right: 4.8%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(189, 67, 128);
+  }
+
+  .bunny-ears-container > div:nth-child(1) > div:nth-child(4) {
+    width: 14%;
+    aspect-ratio: 1;
+    bottom: -10%;
+    right: 9%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(189, 67, 128);
+  }
+
+  .emitter-s-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: cornflowerblue;
+    -webkit-mask-image: url(graflex-emitter.svg);
+    mask-image: url(graflex-emitter.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    z-index: 1;
+  }
+
+  .emitter-mid {
+    height: 56.76%;
+    width: 90.53%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .emitter-mid > div:nth-child(1) {
+    width: 95%;
+    background-color: rgb(57, 104, 145);
+    height: 100%;
+    clip-path: polygon(95% 0, 95% 5%, 75% 50%, 95% 95%, 95% 100%, 0 100%, 0 0);
+    position: absolute;
+  }
+
+  .emitter-mid > div:nth-child(2) {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: rgb(19, 52, 82);
+    height: 76.19%;
+  }
+
+  .emitter-bot {
+    height: 5.41%;
+    width: 100%;
+    background-color: rgb(57, 104, 145);
+  }
+</style>
