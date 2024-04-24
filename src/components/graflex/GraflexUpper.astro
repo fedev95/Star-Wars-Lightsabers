@@ -1,0 +1,223 @@
+<section>
+  <div class="upper-section">
+    <div class="back-btn">
+      <div></div>
+      <div></div>
+      <div class="btn-knurls">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="front-btn">
+      <div class="btn-knurls">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="square-detail"></div>
+    <div class="circle-detail">
+      <div>
+        <div class="inner-detail-1"></div>
+        <div class="inner-detail-2"></div>
+        <div class="inner-detail-3"></div>
+        <div class="inner-detail-4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    height: 32.96%;
+    z-index: 1;
+    position: relative;
+  }
+
+  .upper-section {
+    background-color: cornflowerblue;
+    position: relative;
+    width: 95%;
+  }
+
+  .back-btn {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    top: 0;
+    width: 28.95%;
+    height: 20.22%;
+    left: -28.95%;
+  }
+
+  .front-btn {
+    position: absolute;
+    bottom: 61.8%;
+    width: 28.95%;
+    height: 20.22%;
+    right: -28.95%;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-knurls {
+    display: flex;
+    flex-direction: column;
+    width: 63.64%;
+    height: 100%;
+  }
+
+  .btn-knurls > div {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(57, 104, 145);
+  }
+
+  .btn-knurls > div:nth-child(2n) {
+    background-color: #133452;
+  }
+
+  .btn-knurls > div:nth-child(2n + 1) {
+    background-color: rgb(57, 104, 145);
+  }
+
+  .back-btn > div:nth-child(1) {
+    width: 13.09%;
+    height: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: rgb(57, 104, 145);
+  }
+
+  .back-btn > div:nth-child(2) {
+    width: 23.27%;
+    height: 100%;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    background-color: rgb(57, 104, 145);
+  }
+
+  .front-btn > div:nth-child(3) {
+    width: 13.09%;
+    height: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: rgb(57, 104, 145);
+  }
+
+  .front-btn > div:nth-child(2) {
+    width: 23.27%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    background-color: rgb(57, 104, 145);
+  }
+
+  .square-detail {
+    width: 7.89%;
+    height: 11.24%;
+    background-color: #133452;
+    position: absolute;
+    right: 2.63%;
+    top: 4.49%;
+  }
+
+  .circle-detail {
+    aspect-ratio: 1;
+    width: 36.84%;
+    top: 3.37%;
+    right: 15.79%;
+    border-radius: 50%;
+    background-color: #133452;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .circle-detail > div {
+    position: relative;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    height: 100%;
+    width: 90%;
+  }
+
+  .inner-detail-1 {
+    background-color: #133452;
+    width: 45%;
+    height: 48%;
+    translate: 45%;
+    border-radius: 0 0 9999px 9999px;
+    position: relative;
+  }
+
+  .inner-detail-2 {
+    background-color: #133452;
+    width: 40%;
+    aspect-ratio: 1;
+    translate: 55% 17%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: absolute;
+  }
+
+  /* ==================================== */
+
+  .inner-detail-3 {
+    background-color: #db5736;
+    width: 40%;
+    aspect-ratio: 9/4;
+    border-radius: 9999px;
+    translate: 90% 100%;
+    position: absolute;
+  }
+
+  .inner-detail-4 {
+    background-color: #db5736;
+    width: 40%;
+    aspect-ratio: 9/4;
+    border-radius: 9999px;
+    translate: 90% -190%;
+    position: absolute;
+  }
+</style>
