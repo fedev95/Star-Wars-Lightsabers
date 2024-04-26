@@ -1,31 +1,109 @@
 ---
+import GithubIcon from "../components/GithubIcon.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Star Wars Lightsabers">
   <main>
-    <nav>
-      <a href="kenobi">Kenobi ANH</a>
-      <a href="lukeesb">Luke ESB</a>
-      <a href="vader">Vader ESB</a>
-      <a href="lukerotj">Luke ROTJ</a>
-    </nav>
+    <div class="container">
+      <header>
+        <h1>Star Wars Lightsabers</h1>
+        <h2>The original trilogy collection built with HTML and CSS</h2>
+      </header>
+      <nav>
+        <a href="kenobi">Obi-Wan Kenobi ANH</a>
+        <a href="lukeesb">Luke Skywalker ESB</a>
+        <a href="vader" class="disabled-link">Darth Vader ESB</a>
+        <a href="lukerotj" class="disabled-link">Luke Skywalker V2 ROTJ</a>
+      </nav>
+    </div>
+    <footer>
+      <a href="https://github.com/fedev95" target="_blank">
+        <GithubIcon size={25}/>
+        Federico Burgos
+      </a>
+    </footer>
   </main>
 </Layout>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+  * {
+    font-family: "Poppins", sans-serif;
+  }
 
   main {
+    background: rgb(10, 10, 10);
+    background-image: radial-gradient(
+      ellipse 80% 80% at 50% -20%,
+      rgba(120, 119, 198, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+    color: #e0def4;
     display: flex;
     height: 100vh;
-    background-color: rgb(218, 192, 224);
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+    max-width: 700px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  h2 {
+    color: #c4a7e7;
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: center;
   }
 
   nav {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     padding: 30px;
-    gap: 15px;
+  }
+
+  a {
+    color: #908caa;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+
+  a:hover {
+    color: #e0def4;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+  }
+
+  footer {
+    bottom: 0;
+    padding-bottom: 15px;
+    position: absolute;
+  }
+
+  footer a {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+  }
+
+  .disabled-link {
+    color: #524f67;
+    pointer-events: none;
   }
 </style>
-
