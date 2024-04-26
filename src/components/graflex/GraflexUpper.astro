@@ -1,57 +1,19 @@
+---
+let btnKnurls = new Array(22).fill("");
+---
+
 <section>
   <div class="upper-section">
     <div class="back-btn">
       <div></div>
       <div></div>
       <div class="btn-knurls">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        {btnKnurls.map(() => <div />)}
       </div>
     </div>
     <div class="front-btn">
       <div class="btn-knurls">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        {btnKnurls.map(() => <div />)}
       </div>
       <div></div>
       <div></div>
@@ -59,16 +21,81 @@
     <div class="square-detail"></div>
     <div class="circle-detail">
       <div>
-        <div class="inner-detail-1"></div>
-        <div class="inner-detail-2"></div>
-        <div class="inner-detail-3"></div>
-        <div class="inner-detail-4"></div>
+        <div class="circle-detail-1"></div>
+        <div class="circle-detail-2"></div>
+        <div class="circle-detail-3"></div>
+        <div class="circle-detail-4"></div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
+  section {
+    --chrome: linear-gradient(
+      90deg,
+      rgba(136, 134, 135, 1) 0%,
+      rgba(29, 26, 33, 1) 4%,
+      rgba(116, 112, 111, 1) 9%,
+      rgba(69, 67, 72, 1) 16%,
+      rgba(161, 159, 170, 1) 25%,
+      rgba(150, 148, 159, 1) 36%,
+      rgba(150, 148, 159, 1) 39%,
+      rgba(197, 196, 204, 1) 48%,
+      rgba(197, 196, 204, 1) 57%,
+      rgba(64, 64, 66, 1) 64%,
+      rgba(64, 64, 66, 1) 75%,
+      rgba(128, 126, 129, 1) 87%,
+      rgb(73, 73, 73) 100%
+    );
+
+    --knurls: linear-gradient(
+      180deg,
+      rgba(223, 221, 225, 1) 0%,
+      rgba(146, 141, 163, 1) 30%,
+      rgba(161, 158, 167, 1) 60%,
+      rgba(64, 62, 65, 1) 70%,
+      rgba(64, 62, 65, 1) 100%
+    );
+
+    --btn-ring: linear-gradient(
+      180deg,
+      rgba(64, 62, 65, 1) 0%,
+      rgba(94, 91, 95, 1) 13%,
+      rgba(187, 184, 191, 1) 25%,
+      rgba(236, 235, 237, 1) 35%,
+      rgba(161, 158, 167, 1) 43%,
+      rgba(64, 62, 65, 1) 50%,
+      rgba(64, 62, 65, 1) 100%
+    );
+
+    --btn: linear-gradient(
+      190deg,
+      rgba(47, 21, 12, 1) 0%,
+      rgba(94, 51, 36, 1) 11%,
+      rgba(190, 100, 71, 1) 37%,
+      rgba(94, 51, 36, 1) 60%,
+      rgba(47, 21, 12, 1) 100%
+    );
+
+    --pins: linear-gradient(
+      0deg,
+      rgba(28, 21, 6, 1) 0%,
+      rgba(65, 46, 24, 1) 11%,
+      rgba(143, 118, 87, 1) 37%,
+      rgba(89, 70, 47, 1) 60%,
+      rgba(31, 24, 10, 1) 100%
+    );
+
+    --shadow: linear-gradient(
+      180deg,
+      rgba(202, 248, 255, 0) 0%,
+      rgba(47, 50, 52, 0) 87%,
+      rgba(28, 22, 19, 0.2) 98%,
+      rgba(19, 16, 12, 0.5) 100%
+    );
+  }
+
   section {
     display: flex;
     justify-content: center;
@@ -78,9 +105,17 @@
   }
 
   .upper-section {
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
+    background: var(--chrome);
     position: relative;
     width: 95%;
+  }
+
+  .upper-section::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: var(--shadow);
   }
 
   .back-btn {
@@ -109,20 +144,19 @@
     flex-direction: column;
     width: 63.64%;
     height: 100%;
+    background: var(--knurls);
+    position: relative;
   }
 
   .btn-knurls > div {
     height: 100%;
     width: 100%;
-    background-color: rgb(57, 104, 145);
+    /* background-color: rgb(57, 104, 145); */
   }
 
   .btn-knurls > div:nth-child(2n) {
-    background-color: #133452;
-  }
-
-  .btn-knurls > div:nth-child(2n + 1) {
-    background-color: rgb(57, 104, 145);
+    /* background: #133452; */
+    background: rgb(43, 42, 44);
   }
 
   .back-btn > div:nth-child(1) {
@@ -131,6 +165,20 @@
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     background-color: rgb(57, 104, 145);
+    background: var(--btn);
+  }
+
+  .back-btn > div:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      90deg,
+      rgba(202, 248, 255, 0) 0%,
+      rgba(28, 22, 19, 0.2) 30%,
+      rgba(20, 19, 16, 0.8) 100%
+    );
   }
 
   .back-btn > div:nth-child(2) {
@@ -138,6 +186,7 @@
     height: 100%;
     clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
     background-color: rgb(57, 104, 145);
+    background: var(--btn-ring);
   }
 
   .front-btn > div:nth-child(3) {
@@ -146,6 +195,7 @@
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     background-color: rgb(57, 104, 145);
+    background: var(--btn);
   }
 
   .front-btn > div:nth-child(2) {
@@ -153,12 +203,28 @@
     height: 100%;
     clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
     background-color: rgb(57, 104, 145);
+    background: var(--btn-ring);
+  }
+
+  .front-btn > div:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      270deg,
+      rgba(202, 248, 255, 0) 0%,
+      rgba(28, 22, 19, 0.2) 30%,
+      rgba(20, 19, 16, 0.8) 100%
+    );
   }
 
   .square-detail {
     width: 7.89%;
     height: 11.24%;
-    background-color: #133452;
+    /* background-color: #133452; */
+    background: rgb(18, 18, 19);
+    border-radius: 15%;
     position: absolute;
     right: 2.63%;
     top: 4.49%;
@@ -170,7 +236,8 @@
     top: 3.37%;
     right: 15.79%;
     border-radius: 50%;
-    background-color: #133452;
+    /* background-color: #133452; */
+    background: var(--btn-ring);
     position: absolute;
     overflow: hidden;
   }
@@ -178,22 +245,24 @@
   .circle-detail > div {
     position: relative;
     border-radius: 50%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    background: rgb(18, 18, 19);
     height: 100%;
     width: 90%;
   }
 
-  .inner-detail-1 {
-    background-color: #133452;
+  .circle-detail-1 {
+    /* background-color: #133452; */
+    background: var(--pins);
     width: 45%;
     height: 48%;
     translate: 45%;
     border-radius: 0 0 9999px 9999px;
-    position: relative;
   }
 
-  .inner-detail-2 {
-    background-color: #133452;
+  .circle-detail-2 {
+    /* background-color: #133452; */
+    background: var(--pins);
     width: 40%;
     aspect-ratio: 1;
     translate: 55% 17%;
@@ -201,23 +270,21 @@
     position: absolute;
   }
 
-  /* ==================================== */
-
-  .inner-detail-3 {
-    background-color: #db5736;
+  .circle-detail-3,
+  .circle-detail-4 {
+    /* background-color: #da5636; */
+    background: var(--pins);
     width: 40%;
     aspect-ratio: 9/4;
     border-radius: 9999px;
-    translate: 90% 100%;
     position: absolute;
   }
 
-  .inner-detail-4 {
-    background-color: #db5736;
-    width: 40%;
-    aspect-ratio: 9/4;
-    border-radius: 9999px;
-    translate: 90% -190%;
-    position: absolute;
+  .circle-detail-3 {
+    translate: 90% 100%;
+  }
+
+  .circle-detail-4 {
+    translate: 90% -160%;
   }
 </style>
