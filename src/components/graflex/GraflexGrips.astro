@@ -6,7 +6,6 @@
       <div></div>
     </div>
     <div></div>
-    <div></div>
   </div>
   <div class="middle-grip">
     <div></div>
@@ -19,7 +18,6 @@
       <div></div>
       <div></div>
     </div>
-    <div></div>
     <div></div>
   </div>
   <div class="d-ring-container">
@@ -34,11 +32,63 @@
 
 <style>
   section {
+    --chrome: linear-gradient(
+      90deg,
+      rgba(136, 134, 135, 1) 0%,
+      rgba(29, 26, 33, 1) 4%,
+      rgba(116, 112, 111, 1) 9%,
+      rgba(69, 67, 72, 1) 16%,
+      rgba(161, 159, 170, 1) 25%,
+      rgba(150, 148, 159, 1) 36%,
+      rgba(150, 148, 159, 1) 39%,
+      rgba(197, 196, 204, 1) 48%,
+      rgba(197, 196, 204, 1) 57%,
+      rgba(64, 64, 66, 1) 64%,
+      rgba(64, 64, 66, 1) 75%,
+      rgba(128, 126, 129, 1) 87%,
+      rgba(148, 144, 145, 1) 100%
+    );
+
+    --shadow: linear-gradient(
+      0deg,
+      rgba(202, 248, 255, 0) 0%,
+      rgba(47, 50, 52, 0) 87%,
+      rgba(28, 22, 19, 0.5) 98%,
+      rgba(19, 16, 12, 0.9) 100%
+    );
+
+    --d-ring: linear-gradient(
+      0deg,
+      rgb(185, 184, 185) 0%,
+      rgb(46, 46, 46) 5%,
+      rgb(172, 169, 169) 9%,
+      rgb(150, 144, 144) 49%,
+      rgb(24, 24, 24) 75%,
+      rgba(148, 144, 145, 1) 100%
+    );
+  }
+
+  section {
     height: 34.44%;
     position: relative;
     display: flex;
     justify-content: center;
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
+    background: var(--chrome);
+  }
+
+  section::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  section::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: var(--shadow);
   }
 
   section > div:nth-child(1) {
@@ -54,12 +104,20 @@
     width: 23.68%;
     height: 100%;
     position: absolute;
+    z-index: 2;
   }
 
   .grip > div:nth-child(2),
   .grip > div:nth-child(3) {
-    background-color: #396891;
-    width: 22.22%;
+    /* background-color: #396891; */
+    background: linear-gradient(
+      90deg,
+      rgb(34, 31, 31) 0%,
+      rgb(32, 30, 30) 50%,
+      rgba(23, 21, 21, 1) 55%,
+      rgba(22, 20, 20, 1) 100%
+    );
+    width: 44.44%;
     height: 100%;
   }
 
@@ -73,14 +131,22 @@
   .grip > div:nth-child(1) > div:nth-child(1) {
     width: 100%;
     height: 79.57%;
-    background-color: #133452;
+    /* background-color: #133452; */
+    background: linear-gradient(
+      90deg,
+      rgba(88, 81, 81, 1) 0%,
+      rgba(45, 41, 41, 1) 23%,
+      rgba(23, 21, 21, 1) 39%,
+      rgba(22, 20, 20, 1) 100%
+    );
   }
 
   .grip > div:nth-child(1) > div:nth-child(2) {
     height: 8.6%;
     width: 40%;
     position: relative;
-    background-color: #133452;
+    /* background-color: #133452; */
+    background: rgb(22, 20, 20);
   }
 
   .grip > div:nth-child(1) > div:nth-child(2)::before {
@@ -90,7 +156,15 @@
     width: 100%;
     top: 50%;
     translate: 0 -50%;
-    background-color: #faebd7;
+    /* background-color: #faebd7; */
+    background: linear-gradient(
+      90deg,
+      rgba(181, 174, 174, 1) 0%,
+      rgba(110, 106, 106, 1) 33%,
+      rgba(110, 106, 106, 1) 47%,
+      rgba(68, 66, 66, 1) 60%,
+      rgba(45, 44, 44, 1) 100%
+    );
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
     clip-path: polygon(
@@ -108,23 +182,44 @@
   .grip > div:nth-child(1) > div:nth-child(3) {
     width: 100%;
     height: 11.83%;
-    background-color: #133452;
+    /* background-color: #133452; */
+    background: linear-gradient(
+      90deg,
+      rgba(88, 81, 81, 1) 0%,
+      rgba(45, 41, 41, 1) 23%,
+      rgba(23, 21, 21, 1) 39%,
+      rgba(22, 20, 20, 1) 100%
+    );
   }
 
   .middle-grip {
     height: 100%;
     width: 34.21%;
-    background-color: #133452;
+    /* background-color: #133452; */
+    background: linear-gradient(
+      90deg,
+      rgba(97, 87, 87, 1) 0%,
+      rgba(22, 20, 20, 1) 8%,
+      rgba(22, 20, 20, 1) 100%
+    );
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.08%;
+    z-index: 1;
   }
 
   .middle-grip > div:nth-child(2) {
     aspect-ratio: 1;
     width: 46.15%;
-    background-color: #faebd7;
+    /* background-color: #faebd7; */
+    background: linear-gradient(
+      90deg,
+      rgb(223, 217, 217) 0%,
+      rgba(110, 106, 106, 1) 30%,
+      rgb(92, 89, 89) 70%,
+      rgb(29, 28, 28) 100%
+    );
     border-radius: 50%;
     position: relative;
   }
@@ -135,7 +230,8 @@
     position: absolute;
     height: 20%;
     width: 70%;
-    background-color: #133452;
+    /* background-color: #133452; */
+    background: #121213;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
@@ -144,7 +240,14 @@
   .middle-grip > div:nth-child(1) {
     height: 79.57%;
     width: 23.08%;
-    background-color: #396891;
+    /* background-color: #396891; */
+    background: linear-gradient(
+      90deg,
+      rgba(97, 87, 87, 1) 0%,
+      rgba(42, 40, 40, 1) 33%,
+      rgba(42, 40, 40, 1) 66%,
+      rgba(18, 17, 17, 1) 100%
+    );
   }
 
   .middle-grip > div:nth-child(2)::after {
@@ -154,7 +257,14 @@
   .middle-grip > div:nth-child(3) {
     height: 11.83%;
     width: 23.08%;
-    background-color: #396891;
+    /* background-color: #396891; */
+    background: linear-gradient(
+      90deg,
+      rgba(97, 87, 87, 1) 0%,
+      rgba(42, 40, 40, 1) 33%,
+      rgba(42, 40, 40, 1) 66%,
+      rgba(18, 17, 17, 1) 100%
+    );
   }
 
   .d-ring-container {
@@ -174,18 +284,21 @@
     justify-content: center;
   }
 
+  .d-ring-container > div:nth-child(1) > div {
+    background-color: #6b663d;
+  }
+
   .d-ring-container > div:nth-child(1) > div:nth-child(1) {
     width: 23.08%;
     height: 33.33%;
-    background-color: #6b663d;
     position: relative;
+    background: rgb(14, 13, 13);
     z-index: 1;
   }
 
   .d-ring-container > div:nth-child(1) > div:nth-child(2) {
     width: 100%;
     height: 100%;
-    background-color: #6b663d;
     clip-path: polygon(
       85% 0,
       100% 0,
@@ -200,26 +313,60 @@
       85% 33%
     );
     position: absolute;
-    z-index: 1;
+    background: linear-gradient(
+      90deg,
+      rgba(181, 174, 174, 1) 0%,
+      rgb(49, 48, 48) 5%,
+      rgb(29, 28, 28) 32%,
+      rgb(24, 23, 23) 60%,
+      rgb(14, 13, 13) 100%
+    );
+    z-index: 2;
   }
 
   .d-ring-container > div:nth-child(1) > div:nth-child(3) {
     width: 50%;
     height: 33.33%;
     bottom: 0;
-    background-color: #6b663d;
+    background: var(--chrome);
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     position: absolute;
+    overflow: hidden;
     z-index: 1;
+  }
+
+  .d-ring-container > div:nth-child(1) > div:nth-child(3)::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .d-ring {
     position: absolute;
     width: 100%;
-    height: 33%;
+    height: 43%;
     top: 20%;
     border-radius: 9999px;
     background-color: #133452;
+    background: var(--d-ring);
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .d-ring::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(181, 174, 174, 0) 0%,
+      rgba(227, 223, 223, 0.5340511204481793) 3%,
+      rgba(40, 38, 38, 0.4948354341736695) 23%,
+      rgba(33, 31, 31, 0.8281687675070029) 48%,
+      rgba(51, 49, 49, 0.5480567226890756) 81%,
+      rgba(182, 167, 167, 0) 100%
+    );
   }
 </style>
