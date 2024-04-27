@@ -1,0 +1,50 @@
+<footer>
+  <div>
+    <p>Click the hilt to turn on / off.</p>
+    <p>Mouse wheel for zoom.</p>
+  </div>
+  <a href="/">Back to home</a>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+    font-size: 0.85rem;
+    color: #e0def4;
+    z-index: 20;
+  }
+
+  div {
+    display: flex;
+    gap: 30px;
+  }
+
+  p {
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  a {
+    padding: 5px 15px;
+    border-radius: 4px;
+    color: #e0def4;
+    transition-duration: 0.2s;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  @media (max-width: 500px) {
+    footer {
+      font-size: .7rem;
+    }
+  }
+</style>
