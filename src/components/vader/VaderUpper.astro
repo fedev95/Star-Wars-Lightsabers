@@ -1,0 +1,199 @@
+<section>
+  <div class="clip">
+    <div class="middle-details-container">
+      <div class="screw"></div>
+      <div class="dual-wires-container">
+        <div></div>
+        <div></div>
+        <div class="wires">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="single-wire-container">
+        <div class="single-wire"></div>
+      </div>
+    </div>
+  </div>
+  <div class="back">
+    <div></div>
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 29.31%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .clip {
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 32.94%,
+      97.44% 32.94%,
+      97.44% 38.82%,
+      100% 38.82%,
+      100% 48.24%,
+      97.44% 48.24%,
+      97.44% 54.12%,
+      100% 54.12%,
+      100% 100%,
+      0 100%
+    );
+  }
+
+  .back {
+    width: 15.38%;
+    height: 41.18%;
+    position: absolute;
+    top: 28.57%;
+    left: -12.82%;
+  }
+
+  .back > div:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    background-color: darkslateblue;
+    clip-path: polygon(100% 0, 100% 60%, 83% 100%, 0 100%, 0 0);
+  }
+
+  .back > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    width: 33.33%;
+    height: 37.14%;
+    position: absolute;
+    bottom: 25%;
+    left: -33%;
+  }
+
+  .back > div:nth-child(2) > div:nth-child(1) {
+    width: 50%;
+    height: 61.54%;
+    background-color: rgb(97, 90, 146);
+  }
+
+  .back > div:nth-child(2) > div:nth-child(2) {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(97, 90, 146);
+  }
+
+  .back > div:nth-child(3) {
+    display: flex;
+    left: -100%;
+    position: absolute;
+    width: 100%;
+    height: 34.29%;
+    top: -37%;
+  }
+
+  .back > div:nth-child(3) > div:nth-child(1) {
+    width: 33.33%;
+    height: 100%;
+    background-color: darkslateblue;
+  }
+
+  .back > div:nth-child(3) > div:nth-child(2) {
+    width: 66.66%;
+    height: 100%;
+    background-color: rgb(97, 90, 146);
+    clip-path: polygon(50% 20%, 100% 25%, 100% 75%, 50% 80%, 0 100%, 0 0);
+  }
+
+  .middle-details-container {
+    translate: 195%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25.64%;
+    height: 83.53%;
+    top: 16.47%;
+    position: relative;
+    gap: 14%;
+  }
+
+  .screw {
+    width: 40%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: darkslateblue;
+  }
+
+  .dual-wires-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25.5%;
+    width: 100%;
+    position: relative;
+  }
+
+  .dual-wires-container > div:nth-child(1),
+  .dual-wires-container > div:nth-child(2) {
+    background-color: darkslateblue;
+    min-height: 27.7%;
+    width: 100%;
+    border-radius: 9999px;
+  }
+
+  .wires {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wires > div:nth-child(1),
+  .wires > div:nth-child(2) {
+    height: 85%;
+    width: 30%;
+    background-color:;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wires > div:nth-child(1) {
+    background-color: rgb(238, 113, 90);
+  }
+
+  .wires > div:nth-child(2) {
+    background-color: rgb(228, 227, 227);
+  }
+
+  .single-wire-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 53%;
+    left: -105%;
+    background-color: darkslateblue;
+    border-radius: 9999px;
+    width: 80%;
+    height: 21.13%;
+  }
+
+  .single-wire {
+    background-color: rgb(238, 113, 90);
+    width: 30%;
+    height: 70%;
+    border-radius: 9999px;
+  }
+</style>
