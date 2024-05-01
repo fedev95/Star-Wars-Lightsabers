@@ -1,0 +1,148 @@
+---
+let endcapKnurls = new Array(61).fill("");
+let gripsDetailsKnurls = new Array(12).fill("");
+---
+
+<section>
+  <div class="grips-container">
+    <div class="grips">
+      <div class="middle-grip">
+        <div></div>
+      </div>
+      <div class="grip-l">
+        <div></div>
+      </div>
+      <div class="grip-r">
+        <div></div>
+      </div>
+    </div>
+    <div class="grips-details">
+      <div class="grips-knurls">
+        {gripsDetailsKnurls.map(() => <div />)}
+      </div>
+    </div>
+  </div>
+  <div class="endcap">
+    <div class="endcap-knurls">
+      {endcapKnurls.map(() => <div />)}
+    </div>
+    <div></div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 38.62%;
+  }
+
+  .grips-container {
+    height: 93.75%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    position: relative;
+    background-color: cornflowerblue;
+  }
+
+  .grips {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .middle-grip {
+    width: 35.9%;
+    height: 100%;
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: center;
+  }
+
+  .middle-grip > div {
+    width: 28.57%;
+    height: 100%;
+    background-color: #615a92;
+  }
+
+  .grip-l,
+  .grip-r {
+    width: 30.77%;
+    height: 100%;
+    position: absolute;
+    background-color: darkslateblue;
+  }
+
+  .grip-l {
+    left: -12%;
+    scale: -1;
+  }
+
+  .grip-r {
+    right: -12%;
+  }
+
+  .grip-l > div,
+  .grip-r > div {
+    width: 50%;
+    height: 100%;
+    background-color: #615a92;
+  }
+
+  .grips-details {
+    height: 18.1%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    background-color: rgb(84, 124, 197);
+  }
+
+  .grips-knurls {
+    height: 65%;
+    width: 100%;
+  }
+
+  .grips-knurls > div {
+    height: 8.33%;
+    width: 100%;
+    translate: 0 50%;
+  }
+
+  .grips-knurls > div:nth-child(2n + 1) {
+    height: 8.33%;
+    width: 100%;
+    translate: 0 50%;
+    background-color: #615a92;
+  }
+
+  .endcap {
+    height: 6.25%;
+    width: 100%;
+  }
+
+  .endcap > div:nth-child(2) {
+    height: 28.57%;
+    width: 100%;
+    background-color: cornflowerblue;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+  }
+
+  .endcap-knurls {
+    width: 100%;
+    height: 71.43%;
+    background-color: cornflowerblue;
+    display: flex;
+  }
+
+  .endcap-knurls > div {
+    height: 100%;
+    width: 100%;
+  }
+
+  .endcap-knurls > div:nth-child(2n) {
+    background-color: #615a92;
+  }
+</style>
