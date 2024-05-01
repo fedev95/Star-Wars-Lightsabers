@@ -1,1 +1,162 @@
-Vader ESB
+---
+import Footer from "../components/LightsaberPageFooter.astro";
+import VaderHilt from "../components/vader/VaderHilt.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Darth Vader ESB Lightsaber">
+  <main id="vader-background">
+    <div id="lightsaber-container">
+      <div id="hilt-container">
+        <VaderHilt />
+      </div>
+    </div>
+    <!-- <Footer /> -->
+  </main>
+</Layout>
+
+<style>
+  main {
+    height: 100vh;
+    background-color: lightblue;
+    transition: background 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  main:before {
+    content: "";
+    /* position: absolute; */
+    inset: 0;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+  }
+
+  #lightsaber-container {
+    height: 75vh;
+    display: flex;
+    align-items: end;
+  }
+
+  #hilt-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+  }
+
+  @media (min-width: 650px) {
+    #lightsaber-container {
+      height: 80vw;
+      rotate: 90deg;
+    }
+  }
+</style>
+
+<script>
+  let powerBtn = document.getElementById("power-btn");
+  let blade = document.getElementById("blade");
+  let hiltContainer = document.getElementById("hilt-container");
+  let vaderBackground = document.getElementById("vader-background");
+  let isLightsaberOn = false;
+  let isZoomIn = true;
+
+  const hum = new Audio("vader-font/vader-hum.wav");
+  const swing1 = new Audio("vader-font/vader-swing-1.wav");
+  const swing2 = new Audio("vader-font/vader-swing-2.wav");
+  const powerOn = new Audio("vader-font/vader-poweron.wav");
+  const powerOff = new Audio("vader-font/vader-poweroff.wav");
+
+  hum.volume = 0.25;
+  swing1.volume = 0.25;
+  swing2.volume = 0.25;
+  powerOn.volume = 0.25;
+  powerOff.volume = 0.25;
+
+  document.addEventListener("click", () => {
+    powerBtn?.focus();
+  });
+
+  powerBtn?.addEventListener("click", handleLightsaber);
+
+  document.addEventListener("wheel", (event) => {
+    if (event.deltaY < 0) {
+      zoomIn();
+    } else {
+      zoomOut();
+    }
+  });
+
+  function handleLightsaber() {
+    if (isLightsaberOn) {
+      powerOffSound();
+      powerOffBlade();
+      isLightsaberOn = false;
+    } else {
+      powerOnSound();
+      powerOnBlade();
+      isLightsaberOn = true;
+    }
+  }
+
+  function zoomIn() {
+    if (!isZoomIn) {
+      isZoomIn = true;
+      hiltContainer!.style.height = "100%";
+      if (isLightsaberOn) {
+        swing1.play();
+      }
+    }
+  }
+
+  function zoomOut() {
+    if (isZoomIn) {
+      isZoomIn = false;
+      hiltContainer!.style.height = "24.37%";
+      if (isLightsaberOn) {
+        swing2.play();
+      }
+    }
+  }
+
+  function powerOffSound() {
+    powerOff.play();
+    hum.pause();
+    hum.currentTime = 0;
+    powerOn.pause();
+    powerOn.currentTime = 0;
+  }
+
+  function powerOnSound() {
+    hum.play();
+    powerOn.play();
+    hum.addEventListener("timeupdate", () => {
+      const buffer = 0.2;
+      if (hum.currentTime > hum.duration - buffer) {
+        hum.currentTime = 0;
+        if (isLightsaberOn) {
+          hum.play();
+        }
+      }
+    });
+  }
+
+  function powerOffBlade() {
+    blade!.style.height = "0%";
+    blade!.style.visibility = "hidden";
+    vaderBackground!.style.background = "lightblue";
+  }
+
+  function powerOnBlade() {
+    blade!.style.height = "325%";
+    blade!.style.visibility = "visible";
+    vaderBackground!.style.background = "#e6a5a5";
+  }
+</script>
