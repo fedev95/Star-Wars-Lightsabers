@@ -2,11 +2,6 @@
 import Footer from "../components/LightsaberPageFooter.astro";
 import KenobiHilt from "../components/kenobi/KenobiHilt.astro";
 import Layout from "../layouts/Layout.astro";
-
-// hacer la forma en paint
-// aplicar gausian y levels
-// acomodar las puntas en paint y remover el fondo
-// covertir a svg
 ---
 
 <Layout title="Obi-Wan Kenobi ANH Lightsaber">
@@ -24,7 +19,7 @@ import Layout from "../layouts/Layout.astro";
   main {
     height: 100vh;
     background-color: lightblue;
-    transition: background 0.4s; /* misma duracion que animacion de la blade */
+    transition: background 0.4s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +119,6 @@ import Layout from "../layouts/Layout.astro";
   function zoomOut() {
     if (isZoomIn) {
       isZoomIn = false;
-      // cuanto % es la empuñadura entre la suma de su medida + la hoja
       hiltContainer!.style.height = "23.73%";
       if (isLightsaberOn) {
         swing1.play();
@@ -161,7 +155,6 @@ import Layout from "../layouts/Layout.astro";
   }
 
   function powerOnBlade() {
-    // % de height = dividir la blade entre la hilt
     blade!.style.height = "321%";
     blade!.style.visibility = "visible";
     kenobiBackground!.style.background = "#a4f3ff";
