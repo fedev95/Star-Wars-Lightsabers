@@ -1,0 +1,142 @@
+---
+let bubbles = new Array(6).fill("");
+---
+
+<section>
+  <div class="control-box-container">
+    <div class="border-top"></div>
+    <div class="main">
+      <div class="control-box">
+        <div>
+          <div class="control-box-detail">
+            <div></div>
+          </div>
+        </div>
+        <div class="control-box-edge"></div>
+        <div class="bubbles">
+          {bubbles.map(() => <div />)}
+        </div>
+        <div class="lever"></div>
+      </div>
+    </div>
+    <div class="border-bot"></div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 16.55%;
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .control-box-container {
+    width: 107.69%;
+    height: 100%;
+    background-color: darkslateblue;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .border-top,
+  .border-bot {
+    height: 3.13%;
+    width: 104.76%;
+    background-color: #615a92;
+  }
+
+  .border-top {
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+  }
+
+  .border-bot {
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+  }
+
+  .main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .control-box {
+    width: 38.1%;
+    height: 100%;
+    right: -37%;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .lever {
+    width: 43.75%;
+    height: 100%;
+    top: 15%;
+    left: 15.63%;
+    background-color: darkslateblue;
+    position: absolute;
+    clip-path: polygon(100% 0, 100% 97%, 90% 100%, 10% 100%, 0 97%, 0 0);
+  }
+
+  .control-box > div:nth-child(1) {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #615a92;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 4.44%, 100% 95.56%, 0% 100%);
+  }
+
+  .control-box-detail {
+    width: 83.33%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .control-box-detail > div {
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #615a92;
+  }
+
+  .control-box-edge {
+    width: 25%;
+    height: 88.89%;
+    background-color: darkslateblue;
+    z-index: 2;
+  }
+
+  .bubbles {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    /* background-color: rgb(54, 96, 133); */
+    z-index: 1;
+    right: -12%;
+  }
+
+  .bubbles > div {
+    width: 90%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+  }
+</style>
