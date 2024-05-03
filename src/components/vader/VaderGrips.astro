@@ -32,6 +32,24 @@ let gripsDetailsKnurls = new Array(12).fill("");
 
 <style>
   section {
+    --chrome: linear-gradient(
+      90deg,
+      rgba(96, 94, 92, 1) 0%,
+      rgba(217, 219, 212, 1) 14%,
+      rgba(169, 172, 167, 1) 19%,
+      rgba(107, 111, 109, 1) 30%,
+      rgba(103, 108, 106, 1) 36%,
+      rgba(50, 50, 51, 1) 45%,
+      rgba(55, 56, 56, 1) 58%,
+      rgba(87, 89, 91, 1) 69%,
+      rgba(173, 177, 173, 1) 77%,
+      rgba(151, 156, 153, 1) 84%,
+      rgba(180, 180, 176, 1) 90%,
+      rgb(37, 36, 36) 100%
+    );
+  }
+
+  section {
     height: 38.62%;
   }
 
@@ -41,7 +59,21 @@ let gripsDetailsKnurls = new Array(12).fill("");
     display: flex;
     align-items: end;
     position: relative;
-    background-color: cornflowerblue;
+    background: var(--chrome);
+  }
+
+  .grips-container::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    height: 81.9%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(23, 22, 22, 0.4) 10%,
+      rgba(23, 22, 22, 0.3) 95%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
   }
 
   .grips {
@@ -56,7 +88,13 @@ let gripsDetailsKnurls = new Array(12).fill("");
   .middle-grip {
     width: 35.9%;
     height: 100%;
-    background-color: darkslateblue;
+    background: linear-gradient(
+      90deg,
+      rgb(83, 81, 81) 0%,
+      rgb(15, 15, 15) 10%,
+      rgb(12, 12, 12) 90%,
+      rgba(14, 14, 14, 1) 100%
+    );
     display: flex;
     justify-content: center;
   }
@@ -64,7 +102,13 @@ let gripsDetailsKnurls = new Array(12).fill("");
   .middle-grip > div {
     width: 28.57%;
     height: 100%;
-    background-color: #615a92;
+    background: linear-gradient(
+      90deg,
+      rgb(65, 62, 62) 0%,
+      rgb(17, 17, 17) 30%,
+      rgb(24, 23, 23) 70%,
+      rgba(14, 14, 14, 1) 100%
+    );
   }
 
   .grip-l,
@@ -72,7 +116,13 @@ let gripsDetailsKnurls = new Array(12).fill("");
     width: 30.77%;
     height: 100%;
     position: absolute;
-    background-color: darkslateblue;
+    background: linear-gradient(
+      270deg,
+      rgb(95, 91, 91) 0%,
+      rgb(15, 15, 15) 15%,
+      rgb(17, 17, 17) 70%,
+      rgba(14, 14, 14, 1) 100%
+    );
   }
 
   .grip-l {
@@ -88,7 +138,13 @@ let gripsDetailsKnurls = new Array(12).fill("");
   .grip-r > div {
     width: 50%;
     height: 100%;
-    background-color: #615a92;
+    background: linear-gradient(
+      270deg,
+      rgb(41, 39, 39) 0%,
+      rgb(26, 25, 25) 40%,
+      rgb(15, 15, 15) 60%,
+      rgba(14, 14, 14, 1) 100%
+    );
   }
 
   .grips-details {
@@ -96,7 +152,16 @@ let gripsDetailsKnurls = new Array(12).fill("");
     width: 100%;
     display: flex;
     align-items: end;
-    background-color: rgb(84, 124, 197);
+    background: var(--chrome);
+    z-index: 1;
+    position: relative;
+  }
+
+  .grips-details::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
   }
 
   .grips-knurls {
@@ -114,7 +179,7 @@ let gripsDetailsKnurls = new Array(12).fill("");
     height: 8.33%;
     width: 100%;
     translate: 0 50%;
-    background-color: #615a92;
+    background: rgb(54, 52, 52);
   }
 
   .endcap {
@@ -122,19 +187,41 @@ let gripsDetailsKnurls = new Array(12).fill("");
     width: 100%;
   }
 
+  .endcap-knurls::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(23, 22, 22, 0.5) 35%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  }
+
   .endcap > div:nth-child(2) {
     height: 28.57%;
     width: 100%;
-    background-color: cornflowerblue;
+    background: var(--chrome);
     border-bottom-left-radius: 9999px;
     border-bottom-right-radius: 9999px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .endcap > div:nth-child(2)::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .endcap-knurls {
     width: 100%;
     height: 71.43%;
-    background-color: cornflowerblue;
+    background: var(--chrome);
     display: flex;
+    position: relative;
   }
 
   .endcap-knurls > div {
@@ -143,6 +230,6 @@ let gripsDetailsKnurls = new Array(12).fill("");
   }
 
   .endcap-knurls > div:nth-child(2n) {
-    background-color: #615a92;
+    background: rgb(54, 52, 52);
   }
 </style>
