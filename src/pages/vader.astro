@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
         <VaderHilt />
       </div>
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </main>
 </Layout>
 
@@ -29,7 +29,7 @@ import Layout from "../layouts/Layout.astro";
 
   main:before {
     content: "";
-    /* position: absolute; */
+    position: absolute;
     inset: 0;
     background: radial-gradient(
       circle,
@@ -157,6 +157,6 @@ import Layout from "../layouts/Layout.astro";
   function powerOnBlade() {
     blade!.style.height = "325%";
     blade!.style.visibility = "visible";
-    vaderBackground!.style.background = "#e6a5a5";
+    vaderBackground!.style.background = "#f78787";
   }
 </script>
