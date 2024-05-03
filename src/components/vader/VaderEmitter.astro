@@ -17,8 +17,51 @@ let topEmitterKnurls = new Array(19).fill("");
 
 <style>
   section {
+    --chrome: linear-gradient(
+      90deg,
+      rgb(36, 35, 36) 0%,
+      rgb(220, 221, 221) 16%,
+      rgb(145, 140, 140) 27%,
+      rgb(38, 39, 38) 84%,
+      rgb(17, 17, 17) 100%
+    );
+
+    --emitter-top: linear-gradient(
+      270deg,
+      rgb(15, 15, 15) 0%,
+      rgb(32, 32, 32) 12%,
+      rgb(49, 48, 48) 23%,
+      rgb(17, 17, 17) 36%,
+      rgb(15, 15, 15) 65%,
+      rgb(46, 44, 44) 80%,
+      rgb(29, 28, 28) 88%,
+      rgb(22, 22, 22) 100%
+    );
+
+    --emitter-bot: linear-gradient(
+      270deg,
+      rgb(15, 15, 15) 0%,
+      rgb(32, 32, 32) 12%,
+      rgb(49, 48, 48) 23%,
+      rgb(17, 17, 17) 36%,
+      rgb(15, 15, 15) 60%,
+      rgb(41, 40, 40) 65%,
+      rgb(36, 35, 35) 90%,
+      rgb(19, 18, 18) 100%
+    );
+
+    --chrome-details: linear-gradient(
+      180deg,
+      rgba(20, 20, 20, 1) 0%,
+      rgb(75, 73, 72) 20%,
+      rgb(173, 164, 160) 35%,
+      rgb(148, 141, 138) 39%,
+      rgb(63, 60, 60) 53%,
+      rgba(25, 25, 25, 1) 100%
+    );
+  }
+  section {
     height: 15.52%;
-    /* w: 43mm */
     width: 110.26%;
     position: relative;
     z-index: 5;
@@ -29,9 +72,23 @@ let topEmitterKnurls = new Array(19).fill("");
     height: 100%;
     translate: -6.98%;
     top: 0;
-    background-color: darkslateblue;
+    background: var(--emitter-top);
     clip-path: polygon(0 0, 100% 68.89%, 100% 100%, 0% 100%);
     position: relative;
+  }
+
+  .top-emitter::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 29%,
+      rgba(0, 0, 0, 0.1) 60%,
+      rgba(0, 0, 0, 0.2) 80%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
   }
 
   section > div:nth-child(2) {
@@ -40,7 +97,7 @@ let topEmitterKnurls = new Array(19).fill("");
     left: -12.3%;
     bottom: 0;
     position: absolute;
-    background-color: darkslateblue;
+    background: rgb(20, 20, 20);
   }
 
   section > div:nth-child(3) {
@@ -54,7 +111,7 @@ let topEmitterKnurls = new Array(19).fill("");
 
   .knurls {
     min-width: 42.86%;
-    background-color: rgb(97, 90, 146);
+    background: var(--chrome-details);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,12 +125,12 @@ let topEmitterKnurls = new Array(19).fill("");
   .knurl:nth-child(2n) {
     width: 100%;
     height: 5%;
-    background-color: black;
+    background-color: rgb(56, 55, 55);
   }
 
   section > div:nth-child(3) > div:nth-child(2) {
     flex-grow: 1;
-    background-color: rgb(97, 90, 146);
+    background: var(--chrome-details);
     display: flex;
     clip-path: polygon(
       66% 25%,
@@ -91,11 +148,27 @@ let topEmitterKnurls = new Array(19).fill("");
     height: 51.11%;
     width: 9.3%;
     bottom: 2%;
-    background-color: rgb(97, 90, 146);
+    background: var(--chrome);
     left: -14%;
     rotate: -6deg;
     border-radius: 9999px;
     position: absolute;
+    overflow: hidden;
+  }
+
+  section > div:nth-child(4)::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0.5) 20%,
+      rgba(255, 255, 255, 0.2) 30%,
+      rgba(0, 0, 0, 0.4) 60%,
+      rgba(0, 0, 0, 0.5) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 
   .bot-emitter {
@@ -104,10 +177,24 @@ let topEmitterKnurls = new Array(19).fill("");
     top: 98.5%;
     left: -12.5%;
     position: absolute;
-    background-color: rgb(97, 90, 146);
+    background: var(--emitter-bot);
     -webkit-mask-image: url(vader-emitter.svg);
     mask-image: url(vader-emitter.svg);
     mask-repeat: no-repeat;
     mask-size: cover;
+  }
+
+  .bot-emitter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 29%,
+      rgba(0, 0, 0, 0.3) 60%,
+      rgba(0, 0, 0, 0.1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 </style>
