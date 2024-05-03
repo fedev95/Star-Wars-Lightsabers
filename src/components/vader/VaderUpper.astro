@@ -6,12 +6,12 @@
         <div></div>
         <div></div>
         <div class="wires">
-          <div></div>
-          <div></div>
+          <div class="wire"></div>
+          <div class="wire"></div>
         </div>
       </div>
       <div class="single-wire-container">
-        <div class="single-wire"></div>
+        <div class="single-wire wire"></div>
       </div>
     </div>
   </div>
@@ -30,13 +30,49 @@
 
 <style>
   section {
+    --chrome: linear-gradient(
+      90deg,
+      rgba(96, 94, 92, 1) 0%,
+      rgba(217, 219, 212, 1) 14%,
+      rgba(169, 172, 167, 1) 19%,
+      rgba(107, 111, 109, 1) 30%,
+      rgba(103, 108, 106, 1) 36%,
+      rgba(50, 50, 51, 1) 45%,
+      rgba(55, 56, 56, 1) 58%,
+      rgba(87, 89, 91, 1) 69%,
+      rgba(173, 177, 173, 1) 77%,
+      rgba(151, 156, 153, 1) 84%,
+      rgba(180, 180, 176, 1) 90%,
+      rgb(37, 36, 36) 100%
+    );
+
+    --chrome-details: linear-gradient(
+      180deg,
+      rgba(20, 20, 20, 1) 0%,
+      rgb(75, 73, 72) 20%,
+      rgb(173, 164, 160) 35%,
+      rgb(148, 141, 138) 39%,
+      rgb(63, 60, 60) 53%,
+      rgba(25, 25, 25, 1) 100%
+    );
+
+    --black-details: linear-gradient(
+      0deg,
+      rgb(14, 13, 13) 0%,
+      rgba(80, 78, 78, 1) 36%,
+      rgba(37, 36, 36, 1) 70%,
+      rgb(14, 13, 13) 100%
+    );
+  }
+
+  section {
     height: 29.31%;
     position: relative;
     z-index: 1;
   }
 
   .clip {
-    background-color: cornflowerblue;
+    background: var(--chrome);
     width: 100%;
     height: 100%;
     clip-path: polygon(
@@ -55,6 +91,23 @@
     );
   }
 
+  .clip::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 0.8) 15%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0.1) 48%,
+      rgba(0, 0, 0, 0.1) 67%,
+      rgba(0, 0, 0, 0.3) 76%,
+      rgba(0, 0, 0, 0.1) 95%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+
   .back {
     width: 15.38%;
     height: 41.18%;
@@ -66,7 +119,14 @@
   .back > div:nth-child(1) {
     width: 100%;
     height: 100%;
-    background-color: darkslateblue;
+    background: linear-gradient(
+      180deg,
+      rgba(11, 11, 11, 1) 0%,
+      rgba(23, 23, 22, 1) 55%,
+      rgba(32, 31, 31, 1) 59%,
+      rgb(32, 31, 31) 90%,
+      rgb(112, 109, 109) 100%
+    );
     clip-path: polygon(100% 0, 100% 60%, 83% 100%, 0 100%, 0 0);
   }
 
@@ -83,13 +143,19 @@
   .back > div:nth-child(2) > div:nth-child(1) {
     width: 50%;
     height: 61.54%;
-    background-color: rgb(97, 90, 146);
+    background: var(--black-details);
   }
 
   .back > div:nth-child(2) > div:nth-child(2) {
     width: 50%;
     height: 100%;
-    background-color: rgb(97, 90, 146);
+    background: linear-gradient(
+      0deg,
+      rgb(14, 13, 13) 0%,
+      rgba(80, 78, 78, 1) 36%,
+      rgba(37, 36, 36, 1) 70%,
+      rgb(14, 13, 13) 100%
+    );
   }
 
   .back > div:nth-child(3) {
@@ -104,13 +170,21 @@
   .back > div:nth-child(3) > div:nth-child(1) {
     width: 33.33%;
     height: 100%;
-    background-color: darkslateblue;
+    background: var(--chrome-details);
+    position: relative;
+  }
+
+  .back > div:nth-child(3) > div:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .back > div:nth-child(3) > div:nth-child(2) {
     width: 66.66%;
     height: 100%;
-    background-color: rgb(97, 90, 146);
+    background: var(--chrome-details);
     clip-path: polygon(50% 20%, 100% 25%, 100% 75%, 50% 80%, 0 100%, 0 0);
   }
 
@@ -130,7 +204,13 @@
     width: 40%;
     aspect-ratio: 1;
     border-radius: 50%;
-    background-color: darkslateblue;
+    background: linear-gradient(
+      90deg,
+      rgba(195, 195, 192, 1) 0%,
+      rgb(66, 64, 64) 22%,
+      rgb(63, 61, 61) 76%,
+      rgba(27, 27, 26, 1) 100%
+    );
   }
 
   .dual-wires-container {
@@ -144,7 +224,7 @@
 
   .dual-wires-container > div:nth-child(1),
   .dual-wires-container > div:nth-child(2) {
-    background-color: darkslateblue;
+    background: rgb(20, 20, 20);
     min-height: 27.7%;
     width: 100%;
     border-radius: 9999px;
@@ -170,11 +250,21 @@
   }
 
   .wires > div:nth-child(1) {
-    background-color: rgb(238, 113, 90);
+    background: linear-gradient(
+      90deg,
+      rgba(177, 131, 104, 1) 0%,
+      rgba(105, 66, 37, 1) 47%,
+      rgba(36, 22, 13, 1) 100%
+    );
   }
 
   .wires > div:nth-child(2) {
-    background-color: rgb(228, 227, 227);
+    background: linear-gradient(
+      90deg,
+      rgba(223, 227, 228, 1) 0%,
+      rgba(151, 160, 171, 1) 47%,
+      rgba(83, 96, 103, 1) 100%
+    );
   }
 
   .single-wire-container {
@@ -184,16 +274,40 @@
     align-items: center;
     bottom: 53%;
     left: -105%;
-    background-color: darkslateblue;
+    background: rgb(20, 20, 20);
     border-radius: 9999px;
     width: 80%;
     height: 21.13%;
   }
 
   .single-wire {
-    background-color: rgb(238, 113, 90);
+    background: linear-gradient(
+      90deg,
+      rgba(235, 146, 146, 1) 0%,
+      rgb(175, 49, 49) 47%,
+      rgba(46, 15, 15, 1) 100%
+    );
     width: 30%;
     height: 70%;
     border-radius: 9999px;
+  }
+
+  .wire {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wire::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2) 22%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.2) 76%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 </style>
