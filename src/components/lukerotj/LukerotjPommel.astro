@@ -1,0 +1,118 @@
+<section>
+  <div></div>
+  <div></div>
+  <div>
+    <div class="side side-l"></div>
+    <div class="inner">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="inner inner-r">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="side side-r"></div>
+  </div>
+  <div></div>
+</section>
+
+<style>
+  section {
+    --base-darker: #1f2544;
+    --base-dark: #474f7a;
+    --base-light: #81689d;
+    --base-lighter: #ca95b5;
+
+    height: 12.86%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section > div:nth-child(1) {
+    width: 66.04%;
+    height: 19.44%;
+    background: var(--base-dark);
+  }
+
+  section > div:nth-child(2) {
+    width: 67.92%;
+    height: 5.56%;
+    background: var(--base-dark);
+  }
+
+  section > div:nth-child(3) {
+    width: 71.7%;
+    height: 55.56%;
+    position: relative;
+    display: flex;
+    gap: 21.05%;
+    justify-content: center;
+    background: var(--base-dark);
+  }
+
+  section > div:nth-child(4) {
+    width: 67.92%;
+    height: 19.44%;
+    background: var(--base-dark);
+  }
+
+  .side {
+    height: 100%;
+    width: 13.16%;
+    position: absolute;
+    background: var(--base-darker);
+  }
+
+  .side-l {
+    left: -13.16%;
+    clip-path: polygon(0 22.5%, 100% 0, 100% 100%, 0 77.5%);
+  }
+
+  .side-r {
+    right: -13.16%;
+    clip-path: polygon(0 0, 100% 22.5%, 100% 77.5%, 0 100%);
+  }
+
+  .inner {
+    width: 28.95%;
+    height: 100%;
+    background: var(--base-darker);
+    position: relative;
+  }
+
+  .inner > div:nth-child(1) {
+    height: 22.5%;
+    width: 110%;
+    right: 0;
+    position: absolute;
+    background: var(--base-darker);
+    clip-path: polygon(10% 0, 100% 0, 70% 100%, 0 100%);
+  }
+
+  .inner > div:nth-child(2) {
+    height: 55%;
+    width: 80%;
+    top: 22.5%;
+    left: -10%;
+    position: absolute;
+    background: var(--base-light);
+  }
+
+  .inner > div:nth-child(3) {
+    height: 22.5%;
+    width: 110%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: var(--base-darker);
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 10% 100%);
+  }
+
+  .inner-r {
+    scale: -1 1;
+  }
+</style>
