@@ -31,27 +31,19 @@ let controlBoxCardPins = new Array(13).fill("");
   section {
     --chrome: linear-gradient(
       90deg,
-      rgba(136, 134, 135, 1) 0%,
-      rgba(29, 26, 33, 1) 4%,
-      rgba(116, 112, 111, 1) 9%,
-      rgba(69, 67, 72, 1) 16%,
-      rgba(161, 159, 170, 1) 25%,
-      rgba(150, 148, 159, 1) 36%,
-      rgba(150, 148, 159, 1) 39%,
-      rgba(197, 196, 204, 1) 48%,
-      rgba(197, 196, 204, 1) 57%,
-      rgba(64, 64, 66, 1) 64%,
-      rgba(64, 64, 66, 1) 75%,
-      rgba(128, 126, 129, 1) 87%,
-      rgb(73, 73, 73) 100%
-    );
-
-    --screw: linear-gradient(
-      90deg,
-      rgba(28, 21, 6, 1) 0%,
-      rgba(65, 46, 24, 1) 30%,
-      rgba(143, 118, 87, 1) 57%,
-      rgba(89, 70, 47, 1) 100%
+      rgb(122, 126, 131) 0%,
+      rgb(139, 144, 151) 6%,
+      rgb(28, 35, 43) 11%,
+      rgb(36, 40, 47) 16%,
+      rgb(84, 96, 109) 24%,
+      rgb(231, 233, 235) 35%,
+      rgb(223, 225, 227) 43%,
+      rgb(88, 92, 97) 52%,
+      rgb(31, 31, 32) 66%,
+      rgb(62, 66, 73) 80%,
+      rgb(166, 170, 176) 85%,
+      rgb(91, 93, 97) 96%,
+      rgb(43, 44, 45) 100%
     );
 
     --card-shadow: linear-gradient(
@@ -78,7 +70,6 @@ let controlBoxCardPins = new Array(13).fill("");
     align-items: center;
     height: 100%;
     width: 100%;
-    /* background-color: rgb(57, 104, 145); */
     background: var(--chrome);
     clip-path: polygon(
       100% 0,
@@ -95,7 +86,6 @@ let controlBoxCardPins = new Array(13).fill("");
   .graflex-strip {
     height: 25.49%;
     width: 100%;
-    /* background-color: #133452; */
     background: rgba(223, 223, 223, 0.219);
   }
 
@@ -106,7 +96,6 @@ let controlBoxCardPins = new Array(13).fill("");
     height: 5.88%;
     width: 22%;
     border-radius: 9999px 0 0 9999px;
-    /* background-color: #133452; */
     background-color: rgb(22, 22, 22);
   }
 
@@ -115,8 +104,6 @@ let controlBoxCardPins = new Array(13).fill("");
     height: 100%;
     left: 50%;
     translate: -50%;
-    background-color: #faebd7;
-    /* background: rgba(197, 196, 204, 1); */
     position: absolute;
     z-index: 2;
   }
@@ -132,17 +119,16 @@ let controlBoxCardPins = new Array(13).fill("");
     flex-grow: 1;
     background: linear-gradient(
       90deg,
-      rgb(227, 226, 230) 0%,
-      rgb(99, 96, 96) 30%,
-      rgb(128, 125, 124) 70%,
-      rgb(39, 38, 38) 100%
+      rgb(198, 208, 226) 0%,
+      rgb(75, 78, 82) 30%,
+      rgb(87, 90, 97) 70%,
+      rgb(46, 49, 54) 100%
     );
   }
 
   .control-box-card {
     width: 56.25%;
     height: 100%;
-    /* background-color: #6b663d; */
     background: #a18a6a;
     display: flex;
     flex-direction: column;
@@ -161,7 +147,6 @@ let controlBoxCardPins = new Array(13).fill("");
   .control-box-card > div {
     width: 100%;
     height: 100%;
-    /* background-color: rgb(204, 187, 110); */
     background: linear-gradient(
       0deg,
       rgb(65, 46, 24) 0%,
@@ -195,8 +180,7 @@ let controlBoxCardPins = new Array(13).fill("");
   .lever-container > div:nth-child(1) {
     height: 31.25%;
     width: 12.5%;
-    /* background-color: coral; */
-    background: rgba(29, 26, 33, 1);
+    background: rgb(21, 20, 22);
   }
 
   .lever {
@@ -213,13 +197,12 @@ let controlBoxCardPins = new Array(13).fill("");
   .lever > div:nth-child(1) {
     width: 100%;
     height: 15.63%;
-    /* background-color: #c7bc6b; */
     background: linear-gradient(
       90deg,
-      rgb(227, 226, 230) 0%,
-      rgb(99, 96, 96) 30%,
-      rgb(128, 125, 124) 85%,
-      rgb(39, 38, 38) 100%
+      rgb(201, 213, 231) 0%,
+      rgb(86, 96, 105) 30%,
+      rgb(114, 124, 138) 85%,
+      rgb(43, 46, 51) 100%
     );
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
@@ -234,20 +217,18 @@ let controlBoxCardPins = new Array(13).fill("");
     aspect-ratio: 1;
     position: absolute;
     border-radius: 50%;
-    /* background-color: #645e2f; */
-    background: rgba(0, 0, 0, 0.486);
+    background: rgba(0, 0, 0, 0.6);
   }
 
   .lever > div:nth-child(2) {
     width: 50%;
     height: 70%;
-    /* background-color: #c7bc6b; */
     background: linear-gradient(
       90deg,
-      rgb(227, 226, 230) 0%,
-      rgb(99, 96, 96) 20%,
-      rgb(128, 125, 124) 70%,
-      rgb(39, 38, 38) 100%
+      rgb(201, 213, 231) 0%,
+      rgb(86, 96, 105) 20%,
+      rgb(114, 124, 138) 70%,
+      rgb(43, 46, 51) 100%
     );
     border-bottom-left-radius: 90% 40%;
     position: relative;
@@ -261,12 +242,11 @@ let controlBoxCardPins = new Array(13).fill("");
     height: 5%;
     width: 150%;
     border-radius: 9999px;
-    /* background-color: #c7bc6b; */
     background: linear-gradient(
       90deg,
-      rgb(128, 125, 124) 0%,
-      rgb(128, 125, 124) 60%,
-      rgb(39, 38, 38) 100%
+      rgb(114, 124, 138) 0%,
+      rgb(114, 124, 138) 60%,
+      rgb(30, 34, 37) 100%
     );
   }
 </style>

@@ -34,39 +34,39 @@ let btnKnurls = new Array(22).fill("");
   section {
     --chrome: linear-gradient(
       90deg,
-      rgba(136, 134, 135, 1) 0%,
-      rgba(29, 26, 33, 1) 4%,
-      rgba(116, 112, 111, 1) 9%,
-      rgba(69, 67, 72, 1) 16%,
-      rgba(161, 159, 170, 1) 25%,
-      rgba(150, 148, 159, 1) 36%,
-      rgba(150, 148, 159, 1) 39%,
-      rgba(197, 196, 204, 1) 48%,
-      rgba(197, 196, 204, 1) 57%,
-      rgba(64, 64, 66, 1) 64%,
-      rgba(64, 64, 66, 1) 75%,
-      rgba(128, 126, 129, 1) 87%,
-      rgb(73, 73, 73) 100%
+      rgb(122, 126, 131) 0%,
+      rgb(139, 144, 151) 6%,
+      rgb(28, 35, 43) 11%,
+      rgb(36, 40, 47) 16%,
+      rgb(84, 96, 109) 24%,
+      rgb(231, 233, 235) 35%,
+      rgb(223, 225, 227) 43%,
+      rgb(88, 92, 97) 52%,
+      rgb(31, 31, 32) 66%,
+      rgb(62, 66, 73) 80%,
+      rgb(166, 170, 176) 85%,
+      rgb(91, 93, 97) 96%,
+      rgb(43, 44, 45) 100%
     );
 
     --knurls: linear-gradient(
       180deg,
-      rgba(223, 221, 225, 1) 0%,
-      rgba(146, 141, 163, 1) 30%,
-      rgba(161, 158, 167, 1) 60%,
-      rgba(64, 62, 65, 1) 70%,
-      rgba(64, 62, 65, 1) 100%
+      rgb(175, 185, 212) 0%,
+      rgb(141, 150, 163) 30%,
+      rgb(144, 154, 177) 60%,
+      rgb(61, 67, 80) 70%,
+      rgb(59, 65, 77) 100%
     );
 
     --btn-ring: linear-gradient(
       180deg,
-      rgba(64, 62, 65, 1) 0%,
-      rgba(94, 91, 95, 1) 13%,
-      rgba(187, 184, 191, 1) 25%,
-      rgba(236, 235, 237, 1) 35%,
-      rgba(161, 158, 167, 1) 43%,
-      rgba(64, 62, 65, 1) 50%,
-      rgba(64, 62, 65, 1) 100%
+      rgb(56, 61, 71) 0%,
+      rgb(80, 87, 100) 13%,
+      rgb(164, 174, 189) 25%,
+      rgb(204, 213, 233) 35%,
+      rgb(142, 153, 173) 43%,
+      rgb(61, 68, 77) 50%,
+      rgb(60, 67, 77) 100%
     );
 
     --btn: linear-gradient(
@@ -80,11 +80,11 @@ let btnKnurls = new Array(22).fill("");
 
     --pins: linear-gradient(
       0deg,
-      rgba(28, 21, 6, 1) 0%,
-      rgba(65, 46, 24, 1) 11%,
-      rgba(143, 118, 87, 1) 37%,
-      rgba(89, 70, 47, 1) 60%,
-      rgba(31, 24, 10, 1) 100%
+      rgb(24, 22, 20) 0%,
+      rgb(48, 42, 36) 11%,
+      rgb(80, 71, 61) 37%,
+      rgb(61, 52, 41) 60%,
+      rgb(29, 27, 24) 100%
     );
 
     --shadow: linear-gradient(
@@ -105,7 +105,6 @@ let btnKnurls = new Array(22).fill("");
   }
 
   .upper-section {
-    /* background-color: cornflowerblue; */
     background: var(--chrome);
     position: relative;
     width: 95%;
@@ -151,12 +150,10 @@ let btnKnurls = new Array(22).fill("");
   .btn-knurls > div {
     height: 100%;
     width: 100%;
-    /* background-color: rgb(57, 104, 145); */
   }
 
   .btn-knurls > div:nth-child(2n) {
-    /* background: #133452; */
-    background: rgb(43, 42, 44);
+    background: rgb(63, 64, 66);
   }
 
   .back-btn > div:nth-child(1) {
@@ -164,7 +161,6 @@ let btnKnurls = new Array(22).fill("");
     height: 50%;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
-    background-color: rgb(57, 104, 145);
     background: var(--btn);
   }
 
@@ -185,7 +181,6 @@ let btnKnurls = new Array(22).fill("");
     width: 23.27%;
     height: 100%;
     clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-    background-color: rgb(57, 104, 145);
     background: var(--btn-ring);
   }
 
@@ -194,7 +189,6 @@ let btnKnurls = new Array(22).fill("");
     height: 50%;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
-    background-color: rgb(57, 104, 145);
     background: var(--btn);
   }
 
@@ -202,7 +196,6 @@ let btnKnurls = new Array(22).fill("");
     width: 23.27%;
     height: 100%;
     clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
-    background-color: rgb(57, 104, 145);
     background: var(--btn-ring);
   }
 
@@ -222,7 +215,6 @@ let btnKnurls = new Array(22).fill("");
   .square-detail {
     width: 7.89%;
     height: 11.24%;
-    /* background-color: #133452; */
     background: rgb(18, 18, 19);
     border-radius: 15%;
     position: absolute;
@@ -236,7 +228,6 @@ let btnKnurls = new Array(22).fill("");
     top: 3.37%;
     right: 15.79%;
     border-radius: 50%;
-    /* background-color: #133452; */
     background: var(--btn-ring);
     position: absolute;
     overflow: hidden;
@@ -245,14 +236,12 @@ let btnKnurls = new Array(22).fill("");
   .circle-detail > div {
     position: relative;
     border-radius: 50%;
-    /* background-color: antiquewhite; */
     background: rgb(18, 18, 19);
     height: 100%;
     width: 90%;
   }
 
   .circle-detail-1 {
-    /* background-color: #133452; */
     background: var(--pins);
     width: 45%;
     height: 48%;
@@ -261,7 +250,6 @@ let btnKnurls = new Array(22).fill("");
   }
 
   .circle-detail-2 {
-    /* background-color: #133452; */
     background: var(--pins);
     width: 40%;
     aspect-ratio: 1;
@@ -272,7 +260,6 @@ let btnKnurls = new Array(22).fill("");
 
   .circle-detail-3,
   .circle-detail-4 {
-    /* background-color: #da5636; */
     background: var(--pins);
     width: 40%;
     aspect-ratio: 9/4;

@@ -34,19 +34,19 @@
   section {
     --chrome: linear-gradient(
       90deg,
-      rgba(136, 134, 135, 1) 0%,
-      rgba(29, 26, 33, 1) 4%,
-      rgba(116, 112, 111, 1) 9%,
-      rgba(69, 67, 72, 1) 16%,
-      rgba(161, 159, 170, 1) 25%,
-      rgba(150, 148, 159, 1) 36%,
-      rgba(150, 148, 159, 1) 39%,
-      rgba(197, 196, 204, 1) 48%,
-      rgba(197, 196, 204, 1) 57%,
-      rgba(64, 64, 66, 1) 64%,
-      rgba(64, 64, 66, 1) 75%,
-      rgba(128, 126, 129, 1) 87%,
-      rgba(148, 144, 145, 1) 100%
+      rgb(122, 126, 131) 0%,
+      rgb(139, 144, 151) 6%,
+      rgb(28, 35, 43) 11%,
+      rgb(36, 40, 47) 16%,
+      rgb(84, 96, 109) 24%,
+      rgb(231, 233, 235) 35%,
+      rgb(223, 225, 227) 43%,
+      rgb(88, 92, 97) 52%,
+      rgb(31, 31, 32) 66%,
+      rgb(62, 66, 73) 80%,
+      rgb(166, 170, 176) 85%,
+      rgb(91, 93, 97) 96%,
+      rgb(43, 44, 45) 100%
     );
 
     --shadow: linear-gradient(
@@ -59,12 +59,12 @@
 
     --d-ring: linear-gradient(
       0deg,
-      rgb(185, 184, 185) 0%,
-      rgb(46, 46, 46) 5%,
-      rgb(172, 169, 169) 9%,
-      rgb(150, 144, 144) 49%,
-      rgb(24, 24, 24) 75%,
-      rgba(148, 144, 145, 1) 100%
+      rgb(161, 172, 187) 0%,
+      rgb(33, 35, 37) 5%,
+      rgb(148, 158, 172) 9%,
+      rgb(134, 143, 155) 49%,
+      rgb(23, 23, 24) 75%,
+      rgb(128, 137, 151) 100%
     );
   }
 
@@ -73,7 +73,6 @@
     position: relative;
     display: flex;
     justify-content: center;
-    /* background-color: cornflowerblue; */
     background: var(--chrome);
   }
 
@@ -109,13 +108,12 @@
 
   .grip > div:nth-child(2),
   .grip > div:nth-child(3) {
-    /* background-color: #396891; */
     background: linear-gradient(
       90deg,
-      rgb(34, 31, 31) 0%,
-      rgb(32, 30, 30) 50%,
-      rgba(23, 21, 21, 1) 55%,
-      rgba(22, 20, 20, 1) 100%
+      rgb(31, 32, 34) 0%,
+      rgb(30, 31, 32) 50%,
+      rgb(21, 22, 23) 55%,
+      rgb(20, 21, 22) 100%
     );
     width: 44.44%;
     height: 100%;
@@ -131,13 +129,12 @@
   .grip > div:nth-child(1) > div:nth-child(1) {
     width: 100%;
     height: 79.57%;
-    /* background-color: #133452; */
     background: linear-gradient(
       90deg,
-      rgba(88, 81, 81, 1) 0%,
-      rgba(45, 41, 41, 1) 23%,
-      rgba(23, 21, 21, 1) 39%,
-      rgba(22, 20, 20, 1) 100%
+      rgb(81, 84, 88) 0%,
+      rgb(41, 42, 45) 23%,
+      rgb(21, 22, 23) 39%,
+      rgb(20, 21, 22) 100%
     );
   }
 
@@ -145,8 +142,7 @@
     height: 8.6%;
     width: 40%;
     position: relative;
-    /* background-color: #133452; */
-    background: rgb(22, 20, 20);
+    background: rgb(20, 21, 22);
   }
 
   .grip > div:nth-child(1) > div:nth-child(2)::before {
@@ -156,7 +152,6 @@
     width: 100%;
     top: 50%;
     translate: 0 -50%;
-    /* background-color: #faebd7; */
     background: linear-gradient(
       90deg,
       rgba(181, 174, 174, 1) 0%,
@@ -182,25 +177,23 @@
   .grip > div:nth-child(1) > div:nth-child(3) {
     width: 100%;
     height: 11.83%;
-    /* background-color: #133452; */
     background: linear-gradient(
       90deg,
-      rgba(88, 81, 81, 1) 0%,
-      rgba(45, 41, 41, 1) 23%,
-      rgba(23, 21, 21, 1) 39%,
-      rgba(22, 20, 20, 1) 100%
+      rgb(81, 84, 88) 0%,
+      rgb(41, 42, 45) 23%,
+      rgb(21, 22, 23) 39%,
+      rgb(20, 21, 22) 100%
     );
   }
 
   .middle-grip {
     height: 100%;
     width: 34.21%;
-    /* background-color: #133452; */
     background: linear-gradient(
       90deg,
-      rgba(97, 87, 87, 1) 0%,
-      rgba(22, 20, 20, 1) 8%,
-      rgba(22, 20, 20, 1) 100%
+      rgb(87, 90, 97) 0%,
+      rgb(20, 21, 22) 8%,
+      rgb(20, 21, 22) 100%
     );
     display: flex;
     flex-direction: column;
@@ -212,7 +205,6 @@
   .middle-grip > div:nth-child(2) {
     aspect-ratio: 1;
     width: 46.15%;
-    /* background-color: #faebd7; */
     background: linear-gradient(
       90deg,
       rgb(223, 217, 217) 0%,
@@ -230,7 +222,6 @@
     position: absolute;
     height: 20%;
     width: 70%;
-    /* background-color: #133452; */
     background: #121213;
     top: 50%;
     left: 50%;
@@ -240,13 +231,12 @@
   .middle-grip > div:nth-child(1) {
     height: 79.57%;
     width: 23.08%;
-    /* background-color: #396891; */
     background: linear-gradient(
       90deg,
-      rgba(97, 87, 87, 1) 0%,
-      rgba(42, 40, 40, 1) 33%,
-      rgba(42, 40, 40, 1) 66%,
-      rgba(18, 17, 17, 1) 100%
+      rgb(87, 92, 97) 0%,
+      rgb(40, 41, 42) 33%,
+      rgb(40, 41, 42) 66%,
+      rgb(17, 18, 18) 100%
     );
   }
 
@@ -257,13 +247,12 @@
   .middle-grip > div:nth-child(3) {
     height: 11.83%;
     width: 23.08%;
-    /* background-color: #396891; */
     background: linear-gradient(
       90deg,
-      rgba(97, 87, 87, 1) 0%,
-      rgba(42, 40, 40, 1) 33%,
-      rgba(42, 40, 40, 1) 66%,
-      rgba(18, 17, 17, 1) 100%
+      rgb(87, 92, 97) 0%,
+      rgb(40, 41, 42) 33%,
+      rgb(40, 41, 42) 66%,
+      rgb(17, 18, 18) 100%
     );
   }
 
@@ -282,10 +271,6 @@
     position: relative;
     display: flex;
     justify-content: center;
-  }
-
-  .d-ring-container > div:nth-child(1) > div {
-    background-color: #6b663d;
   }
 
   .d-ring-container > div:nth-child(1) > div:nth-child(1) {
@@ -349,7 +334,6 @@
     height: 43%;
     top: 20%;
     border-radius: 9999px;
-    background-color: #133452;
     background: var(--d-ring);
     overflow: hidden;
     z-index: 2;
@@ -362,10 +346,10 @@
     background: linear-gradient(
       90deg,
       rgba(181, 174, 174, 0) 0%,
-      rgba(227, 223, 223, 0.5340511204481793) 3%,
-      rgba(40, 38, 38, 0.4948354341736695) 23%,
-      rgba(33, 31, 31, 0.8281687675070029) 48%,
-      rgba(51, 49, 49, 0.5480567226890756) 81%,
+      rgba(227, 223, 223, 0.5) 3%,
+      rgba(40, 38, 38, 0.5) 23%,
+      rgba(33, 31, 31, 0.8) 48%,
+      rgba(51, 49, 49, 0.5) 81%,
       rgba(182, 167, 167, 0) 100%
     );
   }
