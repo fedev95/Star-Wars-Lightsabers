@@ -74,11 +74,11 @@ import Layout from "../layouts/Layout.astro";
   const powerOn = new Audio("lukerotj-font/lukerotj-poweron.wav");
   const powerOff = new Audio("lukerotj-font/lukerotj-poweroff.wav");
 
-  hum.volume = 0.25;
-  swing1.volume = 0.25;
-  swing2.volume = 0.25;
-  powerOn.volume = 0.25;
-  powerOff.volume = 0.25;
+  hum.volume = 0.7;
+  swing1.volume = 0.7;
+  swing2.volume = 0.7;
+  powerOn.volume = 0.7;
+  powerOff.volume = 0.7;
 
   document.addEventListener("click", () => {
     powerBtn?.focus();
@@ -157,6 +157,6 @@ import Layout from "../layouts/Layout.astro";
   function powerOnBlade() {
     blade!.style.height = "321%";
     blade!.style.visibility = "visible";
-    lukerotjBackground!.style.background = "#a4f3ff";
+    lukerotjBackground!.style.background = "#b8f7a5";
   }
 </script>
