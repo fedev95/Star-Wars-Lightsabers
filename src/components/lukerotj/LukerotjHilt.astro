@@ -1,0 +1,41 @@
+---
+import LukerotjBlade from "./LukerotjBlade.astro";
+import LukerotjBooster from "./LukerotjBooster.astro";
+import LukerotjClamp from "./LukerotjClamp.astro";
+import LukerotjEmitter from "./LukerotjEmitter.astro";
+import LukerotjGrenade from "./LukerotjGrenade.astro";
+import LukerotjNeck from "./LukerotjNeck.astro";
+import LukerotjPommel from "./LukerotjPommel.astro";
+---
+
+<div id="hilt" class="hilt">
+  <button id="power-btn" autofocus></button>
+  <LukerotjBlade />
+  <LukerotjEmitter />
+  <LukerotjNeck />
+  <LukerotjGrenade />
+  <LukerotjClamp />
+  <LukerotjBooster />
+  <LukerotjPommel />
+</div>
+
+<style>
+  .hilt {
+    position: relative;
+    max-height: 275mm;
+    height: 100%;
+    aspect-ratio: 53 / 280;
+    transition: 0.5s;
+  }
+
+  #power-btn {
+    position: absolute;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+  }
+</style>
