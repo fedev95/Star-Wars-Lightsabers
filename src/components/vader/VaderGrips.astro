@@ -34,18 +34,19 @@ let gripsDetailsKnurls = new Array(12).fill("");
   section {
     --chrome: linear-gradient(
       90deg,
-      rgba(96, 94, 92, 1) 0%,
-      rgba(217, 219, 212, 1) 14%,
-      rgba(169, 172, 167, 1) 19%,
-      rgba(107, 111, 109, 1) 30%,
-      rgba(103, 108, 106, 1) 36%,
-      rgba(50, 50, 51, 1) 45%,
-      rgba(55, 56, 56, 1) 58%,
-      rgba(87, 89, 91, 1) 69%,
-      rgba(173, 177, 173, 1) 77%,
-      rgba(151, 156, 153, 1) 84%,
-      rgba(180, 180, 176, 1) 90%,
-      rgb(37, 36, 36) 100%
+      rgb(131, 127, 122) 0%,
+      rgb(151, 145, 139) 6%,
+      rgba(43, 37, 28, 1) 11%,
+      rgba(47, 42, 36, 1) 16%,
+      rgba(109, 95, 84, 1) 24%,
+      rgba(235, 235, 231, 1) 35%,
+      rgba(227, 227, 223, 1) 43%,
+      rgba(97, 90, 88, 1) 52%,
+      rgb(32, 32, 31) 66%,
+      rgba(73, 68, 62, 1) 80%,
+      rgba(176, 172, 166, 1) 85%,
+      rgba(97, 95, 91, 1) 96%,
+      rgba(45, 44, 43, 1) 100%
     );
   }
 
@@ -161,7 +162,12 @@ let gripsDetailsKnurls = new Array(12).fill("");
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(23, 22, 22, 0.5) 35%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
   }
 
   .grips-knurls {
@@ -179,7 +185,7 @@ let gripsDetailsKnurls = new Array(12).fill("");
     height: 8.33%;
     width: 100%;
     translate: 0 50%;
-    background: rgb(54, 52, 52);
+    background: rgb(34, 33, 33);
   }
 
   .endcap {
