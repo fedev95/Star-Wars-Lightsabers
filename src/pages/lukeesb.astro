@@ -97,9 +97,9 @@ import Layout from "../layouts/Layout.astro";
   function handleLightsaber() {
     if (isLightsaberOn) {
       powerOffSound();
-      setTimeout(() => {
-        powerOffBlade();
-      }, 500);
+      // setTimeout(() => {
+      // }, 500);
+      powerOffBlade();
       isLightsaberOn = false;
     } else {
       powerOnSound();
@@ -151,12 +151,14 @@ import Layout from "../layouts/Layout.astro";
   }
 
   function powerOffBlade() {
+    blade!.style.transitionDuration = "1.5s";
     blade!.style.height = "0%";
     blade!.style.visibility = "hidden";
     graflexBackground!.style.background = "lightblue";
   }
 
   function powerOnBlade() {
+    blade!.style.transitionDuration = "0.6s";
     blade!.style.height = "347%";
     blade!.style.visibility = "visible";
     graflexBackground!.style.background = "#95d8ff";

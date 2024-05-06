@@ -149,12 +149,14 @@ import Layout from "../layouts/Layout.astro";
   }
 
   function powerOffBlade() {
+    blade!.style.transitionDuration = "0.7s";
     blade!.style.height = "0%";
     blade!.style.visibility = "hidden";
     lukerotjBackground!.style.background = "lightblue";
   }
 
   function powerOnBlade() {
+    blade!.style.transitionDuration = "0.4s";
     blade!.style.height = "321%";
     blade!.style.visibility = "visible";
     lukerotjBackground!.style.background = "#b8f7a5";
