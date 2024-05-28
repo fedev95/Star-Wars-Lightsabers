@@ -7,6 +7,7 @@
   <div></div>
   <div></div>
   <div></div>
+  <div></div>
 </section>
 
 <style>
@@ -31,11 +32,11 @@
     --weathered-gradient-1: linear-gradient(
       0deg,
       rgba(41, 41, 43, 0) 0%,
-      rgba(41, 41, 43, 0.577468487394958) 25%,
-      rgba(41, 41, 43, 0.5970763305322129) 65%,
+      rgba(31, 31, 32, 0.7) 25%,
+      rgba(31, 31, 32, 0.7) 65%,
       rgba(41, 41, 43, 0) 84%,
-      rgba(41, 41, 43, 0.47102591036414565) 91%,
-      rgba(0, 0, 0, 0.8547794117647058) 98%
+      rgba(41, 41, 43, 0.5) 91%,
+      rgba(0, 0, 0, 0.9) 98%
     );
 
     --weathered-gradient-2: linear-gradient(
@@ -108,12 +109,12 @@
     content: "";
     inset: 0;
     position: absolute;
-    background-color: rgba(34, 33, 33, 0.616);
+    background-color: rgba(34, 33, 33, 0.8);
     clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
   }
 
   section > div:nth-child(5) {
-    height: 22.58%;
+    height: 16.13%;
     width: 54.72%;
     position: relative;
     background: var(--gradient);
@@ -124,6 +125,22 @@
     position: absolute;
     inset: 0;
     background: var(--weathered-gradient-2);
+  }
+
+  section > div:nth-child(6) {
+    height: 6.45%;
+    width: 54.72%;
+    position: relative;
+    background: var(--gradient);
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+    overflow: hidden;
+  }
+
+  section > div:nth-child(6)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(34, 33, 33, 0.8);
   }
 
   .emitter-top div:nth-child(1) {
