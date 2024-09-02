@@ -16,7 +16,6 @@ let bubbles = new Array(6).fill("");
         <div class="bubbles">
           {bubbles.map(() => <div />)}
         </div>
-        <div class="lever"></div>
       </div>
     </div>
     <div class="border-bot"></div>
@@ -107,21 +106,6 @@ let bubbles = new Array(6).fill("");
     display: flex;
     justify-content: end;
     align-items: center;
-  }
-
-  .lever {
-    width: 43.75%;
-    height: 100%;
-    top: 15%;
-    left: 15.63%;
-    background: linear-gradient(
-      90deg,
-      rgb(15, 15, 15) 0%,
-      rgb(100, 98, 98) 85%,
-      rgb(19, 18, 18) 100%
-    );
-    position: absolute;
-    clip-path: polygon(100% 0, 100% 97%, 90% 100%, 10% 100%, 0 97%, 0 0);
   }
 
   .control-box > div:nth-child(1) {

@@ -48,6 +48,14 @@ let gripsDetailsKnurls = new Array(12).fill("");
       rgba(97, 95, 91, 1) 96%,
       rgba(45, 44, 43, 1) 100%
     );
+
+    --screws: linear-gradient(
+      90deg,
+      rgba(195, 195, 192, 1) 0%,
+      rgb(66, 64, 64) 22%,
+      rgb(63, 61, 61) 76%,
+      rgba(27, 27, 26, 1) 100%
+    );
   }
 
   section {
@@ -98,6 +106,27 @@ let gripsDetailsKnurls = new Array(12).fill("");
     );
     display: flex;
     justify-content: center;
+    position: relative;
+  }
+
+  .middle-grip::before,
+  .middle-grip::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: var(--screws);
+    width: 25%;
+    aspect-ratio: 1;
+  }
+
+  .middle-grip::before {
+    top: 7%;
+    left: 6%;
+  }
+
+  .middle-grip::after {
+    bottom: 5%;
+    right: 6%;
   }
 
   .middle-grip > div {
@@ -131,8 +160,28 @@ let gripsDetailsKnurls = new Array(12).fill("");
     scale: -1;
   }
 
+  .grip-l::before,
+  .grip-r::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: var(--screws);
+    width: 18%;
+    aspect-ratio: 1/1.6;
+  }
+
+  .grip-l::before {
+    top: 5%;
+    left: 26%;
+  }
+
   .grip-r {
     right: -12%;
+  }
+
+  .grip-r::before {
+    top: 7%;
+    left: 26%;
   }
 
   .grip-l > div,
