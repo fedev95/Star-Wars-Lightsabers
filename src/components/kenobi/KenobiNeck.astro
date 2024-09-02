@@ -30,18 +30,13 @@
       rgb(37, 26, 15) 100%
     );
 
-    --weathered-gradient-1: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0) 30%,
-      rgba(36, 36, 36, 0.5) 50%,
-      rgba(0, 0, 0, 0.7) 75%
-    );
-
-    --weathered-gradient-2: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 30%,
-      rgba(22, 22, 22, 0.5) 50%,
-      rgba(0, 0, 0, 0.7) 85%
+    --black-light: linear-gradient(
+      90deg,
+      rgba(18, 18, 18, 1) 0%,
+      rgb(51, 50, 50) 5%,
+      rgb(68, 66, 66) 14%,
+      rgba(23, 22, 22, 1) 43%,
+      rgba(15, 15, 15, 1) 100%
     );
   }
 
@@ -72,7 +67,8 @@
     content: "";
     inset: 0;
     position: absolute;
-    background: var(--weathered-gradient-2);
+    background: var(--black-light);
+    opacity: 0.85;
   }
 
   .div3 {
@@ -80,7 +76,6 @@
     height: 7.69%;
     position: relative;
     background: var(--gold-gradient);
-
     clip-path: polygon(7% 0, 93% 0, 100% 100%, 0 100%);
   }
 
@@ -88,50 +83,33 @@
     content: "";
     inset: 0;
     position: absolute;
-    background: var(--weathered-gradient-1);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(36, 36, 36, 0.7) 30%,
+      rgba(0, 0, 0, 0.9) 95%
+    );
   }
 
   .div4 {
     width: 35.85%;
     height: 15.38%;
     position: relative;
-    background: var(--gold-gradient);
-  }
-
-  .div4::before {
-    content: "";
-    inset: 0;
-    position: absolute;
-    background: var(--weathered-gradient-1);
+    background: var(--black-light);
   }
 
   .div5 {
     width: 35.85%;
     height: 5.13%;
-    background: var(--gold-gradient);
-
+    background-color: rgb(17, 17, 17);
     clip-path: polygon(0 0, 100% 0, 89.5% 100%, 10.5% 100%);
-  }
-
-  .div5::before {
-    content: "";
-    inset: 0;
-    position: absolute;
-    background: rgba(15, 15, 15, 0.8);
   }
 
   .div6 {
     width: 28.3%;
     height: 28.21%;
     position: relative;
-    background: var(--gold-gradient);
-  }
-
-  .div6::before {
-    content: "";
-    inset: 0;
-    position: absolute;
-    background: var(--weathered-gradient-2);
+    background: var(--black-light);
   }
 
   .div1 div:nth-child(1) {
@@ -145,7 +123,12 @@
     content: "";
     inset: 0;
     position: absolute;
-    background: var(--weathered-gradient-1);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(22, 22, 22, 0.5) 50%,
+      rgba(0, 0, 0, 0.7) 85%
+    );
   }
 
   .div1 div:nth-child(2) {
@@ -159,7 +142,7 @@
     content: "";
     inset: 0;
     position: absolute;
-    background: rgba(22, 22, 22, 0.7);
+    background: rgba(22, 22, 22, 0.9);
   }
 
   .div1 div:nth-child(3) {
@@ -173,6 +156,11 @@
     content: "";
     inset: 0;
     position: absolute;
-    background: var(--weathered-gradient-2);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(22, 22, 22, 0.5) 50%,
+      rgba(0, 0, 0, 0.7) 85%
+    );
   }
 </style>

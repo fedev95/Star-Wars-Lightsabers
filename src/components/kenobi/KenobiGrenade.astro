@@ -47,6 +47,14 @@ let rows = ["", "", "", "", "", "", "", "", ""];
       rgb(32, 29, 29) 50%,
       rgba(32, 29, 29, 1) 100%
     );
+
+    --weathering: linear-gradient(
+      0deg,
+      rgb(148, 93, 66) 0%,
+      rgba(14, 14, 14, 1) 20%,
+      rgba(14, 14, 14, 1) 80%,
+      rgb(90, 63, 50) 100%
+    );
   }
 
   section {
@@ -65,7 +73,6 @@ let rows = ["", "", "", "", "", "", "", "", ""];
     align-items: center;
     width: 57.5%;
     height: 100%;
-    /* background-color: rgb(70, 77, 148); */
     background: var(--grenade-dark);
   }
 
@@ -74,7 +81,6 @@ let rows = ["", "", "", "", "", "", "", "", ""];
     width: 71.7%;
     position: relative;
     background: var(--grenade-light);
-    /* background-color: rgb(70, 77, 148); */
     clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
   }
 
@@ -93,16 +99,25 @@ let rows = ["", "", "", "", "", "", "", "", ""];
   .grenade-top-2 {
     height: 2.41%;
     width: 71.7%;
-    /* background-color: rgb(70, 77, 148); */
-    background: var(--grenade-dark);
+    background: rgb(14, 14, 14);
+    background: linear-gradient(
+      180deg,
+      rgba(14, 14, 14, 1) 0%,
+      rgba(93, 62, 47, 1) 100%
+    );
     clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   }
 
   .grenade-bot {
     height: 2.4%;
     width: 71.7%;
-    /* background-color: rgb(70, 77, 148); */
     background: var(--grenade-dark);
+    background: rgb(14, 14, 14);
+    background: linear-gradient(
+      0deg,
+      rgba(14, 14, 14, 1) 0%,
+      rgba(58, 43, 36) 100%
+    );
     clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
   }
 
@@ -111,7 +126,6 @@ let rows = ["", "", "", "", "", "", "", "", ""];
     align-items: center;
     height: 9.64%;
     width: 71.7%;
-    /* background-color: rgb(70, 76, 148); */
     background: var(--grenade-dark);
     clip-path: polygon(
       10% 0%,
@@ -123,6 +137,15 @@ let rows = ["", "", "", "", "", "", "", "", ""];
       0 75%,
       0 25%
     );
+    position: relative;
+  }
+
+  .row::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: var(--weathering);
+    opacity: 0.5;
   }
 
   .row-grid {
@@ -136,7 +159,6 @@ let rows = ["", "", "", "", "", "", "", "", ""];
     height: 100%;
     width: 28.95%;
     position: relative;
-    /* background-color: rgb(117, 141, 163); */
   }
 
   .row-grid div::before {
