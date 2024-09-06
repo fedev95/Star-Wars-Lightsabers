@@ -14,7 +14,9 @@
       <div></div>
     </div>
     <div class="clamp-details">
-      <div class="details-row">
+      <div class="screw"></div>
+      <div class="cotter-pin"></div>
+      <div class="details-row details-row-1">
         <div class="line-vent"></div>
         <div class="square-vent"></div>
         <div class="lines">
@@ -24,8 +26,8 @@
           <div></div>
         </div>
       </div>
-      <div></div>
-      <div class="details-row">
+      <div class="graflex"></div>
+      <div class="details-row details-row-2">
         <div></div>
         <div class="square-vent"></div>
         <div class="lines">
@@ -71,6 +73,15 @@
       rgba(41, 41, 43, 0.5) 91%,
       rgba(68, 44, 35, 0.774) 98%
     );
+
+    --chrome-tape: linear-gradient(
+      90deg,
+      rgba(18, 18, 18, 1) 0%,
+      rgb(128, 126, 126) 5%,
+      rgb(226, 219, 219) 14%,
+      rgb(78, 76, 76) 43%,
+      rgb(36, 35, 35) 100%
+    );
   }
 
   section {
@@ -81,25 +92,46 @@
   }
 
   .clamp-details {
-    width: 100%;
-    height: 100%;
+    align-items: end;
+    background: var(--clamp-gradient);
     display: flex;
     flex-direction: column;
-    align-items: end;
+    height: 100%;
     justify-content: space-between;
     position: relative;
-    background: var(--clamp-gradient);
+    width: 100%;
   }
 
   .clamp-details::before {
-    position: absolute;
+    background: var(--weathered-gradient-1);
     content: "";
     inset: 0;
+    position: absolute;
     transform: scaleY(-1);
-    background: var(--weathered-gradient-1);
   }
 
-  .clamp-details > div:nth-child(2) {
+  .clamp-details::after {
+    background: var(--chrome-tape);
+    clip-path: polygon(
+      0 0,
+      35% 0,
+      35% 5%,
+      42% 10%,
+      52% 35%,
+      47% 37%,
+      53% 74%,
+      45% 82%,
+      50% 92%,
+      58% 95%,
+      60% 100%,
+      0 100%
+    );
+    content: "";
+    inset: 0;
+    position: absolute;
+  }
+
+  .graflex {
     background-image: url(graflex.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -114,23 +146,72 @@
     gap: 4%;
     width: 100%;
     height: 12%;
+    z-index: 1;
   }
 
-  .clamp-details > div:nth-child(1) {
+  .screw {
+    background: rgb(65, 55, 37);
+    border-radius: 50%;
+    height: 7%;
+    left: 0;
+    position: absolute;
+    top: 7%;
+    width: 5%;
+    z-index: 2;
+  }
+
+  .cotter-pin {
+    background: linear-gradient(
+      90deg,
+      rgb(143, 143, 139) 15%,
+      rgb(102, 102, 98) 20%,
+      rgb(46, 44, 44) 40%,
+      rgb(32, 31, 31) 50%,
+      rgb(58, 57, 56) 80%,
+      rgb(46, 44, 43) 90%,
+      rgb(19, 18, 18) 100%
+    );
+    border-radius: 9999px;
+    bottom: -7%;
+    height: 13%;
+    position: absolute;
+    right: 15%;
+    rotate: 44deg;
+    width: 5%;
+    z-index: 2;
+  }
+
+  .screw::before {
+    background: linear-gradient(
+      90deg,
+      rgb(56, 56, 50) 0%,
+      rgb(94, 78, 48) 22%,
+      rgb(145, 120, 67) 76%,
+      rgb(78, 67, 45) 100%
+    );
+    border-radius: 50%;
+    content: "";
+    inset: 0;
+    position: absolute;
+    translate: -15%;
+    z-index: 1;
+  }
+
+  .details-row-1 {
     margin-top: 23%;
   }
 
-  .clamp-details > div:nth-child(3) {
+  .details-row-2 {
     margin-bottom: 23%;
   }
 
   .details-row > div:nth-child(1),
   .details-row > div:nth-child(3) {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .line-vent {
@@ -138,60 +219,58 @@
   }
 
   .line-vent::before {
-    content: "";
-    right: 0;
-    bottom: -40%;
-    position: absolute;
-    height: 45%;
-    width: 90%;
     background: var(--dark-details);
     border-radius: 9999px;
+    bottom: -40%;
+    content: "";
+    height: 45%;
+    position: absolute;
+    right: 0;
+    width: 90%;
   }
 
   .lines > div {
     background: var(--dark-details);
-    opacity: 60%;
     height: 14.28%;
+    opacity: 40%;
   }
 
   .square-vent {
+    background: var(--dark-details);
     border-radius: 10%;
     height: 100%;
     min-width: 10%;
-    background: var(--dark-details);
     position: relative;
   }
 
   .clamp-container {
-    width: 75.47%;
     height: 100%;
     position: relative;
+    width: 75.47%;
   }
 
   .control-box {
-    width: 30%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 3%;
-    left: -30%;
     background: linear-gradient(
       90deg,
       rgb(207, 207, 201) 15%,
       rgb(189, 189, 185) 20%,
-      rgb(56, 55, 55) 40%,
+      rgb(31, 30, 30) 40%,
       rgb(80, 76, 76) 50%,
       rgb(107, 105, 104) 80%,
       rgb(46, 44, 43) 90%,
       rgb(19, 18, 18) 100%
     );
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    left: -30%;
+    padding-right: 3%;
+    position: absolute;
+    width: 30%;
     z-index: 1;
   }
 
   .control-box-edge {
-    width: 26.67%;
-    height: 100%;
     background: linear-gradient(
       90deg,
       rgb(207, 207, 201) 0%,
@@ -201,31 +280,30 @@
       rgb(29, 28, 28) 80%,
       rgb(29, 28, 28) 100%
     );
+    height: 100%;
+    width: 26.67%;
   }
 
   .control-box-lever {
-    width: 50%;
-    height: 58.82%;
-    border-radius: 0 0 9999px 9999px;
     background: linear-gradient(
       90deg,
-      rgb(207, 207, 201) 0%,
-      rgb(158, 158, 154) 10%,
+      rgb(255, 255, 255) 0%,
+      rgb(189, 189, 182) 10%,
       rgb(102, 99, 99) 20%,
       rgb(107, 103, 103) 50%,
-      rgb(138, 135, 133) 80%,
+      rgb(180, 176, 173) 80%,
       rgb(58, 56, 55) 90%,
       rgb(29, 28, 28) 100%
     );
-    translate: 0 80%;
+    border-radius: 0 0 9999px 9999px;
+    height: 58.82%;
     position: relative;
+    rotate: -4deg;
+    translate: 0 80%;
+    width: 60%;
   }
 
   .control-box-lever::before {
-    position: absolute;
-    content: "";
-    inset: 0;
-    border-radius: 0 0 9999px 9999px;
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.4) 0%,
@@ -234,21 +312,24 @@
       rgba(0, 0, 0, 0.2) 83%,
       rgba(0, 0, 0, 0) 100%
     );
+    border-radius: 0 0 9999px 9999px;
+    content: "";
+    inset: 0;
+    position: absolute;
   }
 
   .bubbles {
-    position: absolute;
-    width: 39%;
-    height: 100%;
-    left: -34%;
+    align-items: start;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: center;
-    align-items: start;
+    left: -34%;
+    position: absolute;
+    width: 39%;
   }
 
   .bubbles > div {
-    height: 11.76%;
     aspect-ratio: 1/1;
     background: linear-gradient(
       0deg,
@@ -256,7 +337,8 @@
       rgba(212, 230, 231, 1) 100%
     );
     border-radius: 50%;
-    position: relative;
+    height: 11.76%;
     overflow: hidden;
+    position: relative;
   }
 </style>
