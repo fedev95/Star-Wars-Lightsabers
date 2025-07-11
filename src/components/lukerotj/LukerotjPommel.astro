@@ -1,5 +1,7 @@
 <section>
-  <div></div>
+  <div>
+    <div class="mystery-chunk"></div>
+  </div>
   <div></div>
   <div>
     <div class="side side-l"></div>
@@ -49,6 +51,110 @@
     height: 19.44%;
     background: var(--chrome);
     position: relative;
+  }
+
+  .mystery-chunk {
+    position: absolute;
+    z-index: 90;
+    translate: 260%;
+    height: 100%;
+    aspect-ratio: 1;
+    background: conic-gradient(
+      rgb(32, 32, 31) 0%,
+      rgb(32, 32, 31) 8.5%,
+
+      rgb(97, 90, 88) 8.5%,
+      rgb(97, 90, 88) 16.5%,
+
+      rgb(32, 32, 31) 16.5%,
+      rgb(32, 32, 31) 33.5%,
+
+      rgb(153, 151, 147) 33.5%,
+      rgb(153, 151, 147) 41.5%,
+
+      rgb(43, 42, 41) 40%,
+      rgb(80, 79, 76) 58.5%,
+
+      rgb(153, 151, 147) 58%,
+      rgb(153, 151, 147) 66.5%,
+
+      rgb(128, 126, 123) 66.5%,
+      rgb(97, 95, 91) 83.5%,
+
+      rgb(97, 90, 88) 83.5%,
+      rgb(97, 90, 88) 91.5%,
+
+      rgb(32, 32, 31) 91.5%,
+      rgba(32, 32, 31) 100%
+    );
+    clip-path: polygon(
+      20% 0%,
+      80% 0%,
+      100% 20%,
+      100% 80%,
+      80% 100%,
+      20% 100%,
+      0% 80%,
+      0% 20%
+    );
+  }
+
+  .mystery-chunk::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    aspect-ratio: 1;
+    background: linear-gradient(
+        45deg,
+        #44444480 0%,
+        #44444480 12.5%,
+        #cccccc80 12.5%,
+        #cccccc80 25%,
+        #44444480 25%,
+        #44444480 37.5%,
+        #cccccc80 37.5%,
+        #cccccc80 50%,
+        #44444480 50%,
+        #44444480 62.5%,
+        #cccccc80 62.5%,
+        #cccccc80 75%,
+        #44444480 75%,
+        #44444480 87.5%,
+        #cccccc80 87.5%,
+        #cccccc80 100%
+      ),
+      linear-gradient(
+        -45deg,
+        #44444480 0%,
+        #44444480 12.5%,
+        #cccccc80 12.5%,
+        #cccccc80 25%,
+        #44444480 25%,
+        #44444480 37.5%,
+        #cccccc80 37.5%,
+        #cccccc80 50%,
+        #44444480 50%,
+        #44444480 62.5%,
+        #cccccc80 62.5%,
+        #cccccc80 75%,
+        #44444480 75%,
+        #44444480 87.5%,
+        #cccccc80 87.5%,
+        #cccccc80 100%
+      );
+    clip-path: polygon(
+      20% 0%,
+      80% 0%,
+      100% 20%,
+      100% 80%,
+      80% 100%,
+      20% 100%,
+      0% 80%,
+      0% 20%
+    );
   }
 
   section > div:nth-child(1)::before {
