@@ -47,14 +47,11 @@ let grenadeThreads = new Array(8).fill("");
 
     --black: linear-gradient(
       90deg,
-      rgba(66, 65, 63, 1) 0%,
-      rgba(24, 20, 17, 1) 8%,
-      rgba(13, 9, 6, 1) 15%,
-      rgba(13, 9, 6, 1) 31%,
-      rgba(42, 39, 38, 1) 49%,
-      rgba(13, 9, 6, 1) 67%,
-      rgba(13, 9, 6, 1) 86%,
-      rgba(45, 44, 43, 1) 100%
+      rgba(18, 18, 18, 1) 0%,
+      rgb(37, 37, 37) 25%,
+      rgb(48, 47, 47) 34%,
+      rgb(20, 20, 20) 53%,
+      rgb(14, 13, 13) 100%
     );
 
     height: 31.07%;
@@ -112,6 +109,49 @@ let grenadeThreads = new Array(8).fill("");
     );
   }
 
+  .grenade-top > div:nth-child(1)::after {
+    inset: 0;
+    content: "";
+    position: absolute;
+    background: var(--black);
+    clip-path: polygon(
+      0 0,
+      21% 0,
+      18% 15%,
+      17% 20%,
+      20% 28%,
+      21% 36%,
+      18% 41%,
+      33% 54%,
+      33% 54%,
+      36% 47%,
+      34% 40%,
+      36% 29%,
+      42% 24%,
+      45% 12%,
+      63% 11%,
+      68% 22%,
+      72% 34%,
+      75% 54%,
+      73% 65%,
+      64% 74%,
+      59% 83%,
+      66% 87%,
+      80% 88%,
+      84% 87%,
+      95% 76%,
+      96% 59%,
+      100% 19%,
+      100% 100%,
+      54% 100%,
+      41% 96%,
+      30% 94%,
+      20% 92%,
+      13% 94%,
+      1% 97%
+    );
+  }
+
   .grenade-top > div:nth-child(2) {
     height: 22%;
     background: var(--chrome);
@@ -119,7 +159,7 @@ let grenadeThreads = new Array(8).fill("");
 
   .grenade-top > div:nth-child(3) {
     height: 23.37%;
-    background: rgb(10, 10, 10);
+    background: rgb(17, 17, 17);
     clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   }
 
@@ -145,7 +185,7 @@ let grenadeThreads = new Array(8).fill("");
 
   .grenade-thread > div:nth-child(3) {
     clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-    background: rgb(10, 10, 10);
+    background: rgb(17, 17, 17);
   }
 
   .grenade-bot {
@@ -171,7 +211,43 @@ let grenadeThreads = new Array(8).fill("");
     position: relative;
   }
 
+  .grenade-bot > div:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--black);
+    clip-path: polygon(
+      0 100%,
+      0 28%,
+      9% 31%,
+      13% 28%,
+      16% 32%,
+      22% 38%,
+      24% 42%,
+      38% 40%,
+      28% 43%,
+      39% 36%,
+      29% 36%,
+      28% 32%,
+      33% 31%,
+      38% 29%,
+      43% 29%,
+      50% 30%,
+      56% 32%,
+      61% 36%,
+      70% 37%,
+      74% 38%,
+      70% 32%,
+      78% 30%,
+      87% 31%,
+      94% 37%,
+      100% 35%,
+      100% 100%
+    );
+  }
+
   .grenade-bot > div:nth-child(2)::before {
+    opacity: 0.6;
     content: "";
     position: absolute;
     inset: 0;
@@ -200,10 +276,10 @@ let grenadeThreads = new Array(8).fill("");
     inset: 0;
     background: linear-gradient(
       180deg,
-      rgba(13, 9, 6, 0) 0%,
-      rgba(24, 23, 23, 0) 75%,
-      rgba(24, 23, 23, 0.5) 85%,
-      rgba(17, 17, 17, 0.5) 100%
+      rgba(13, 9, 6, 0.3) 0%,
+      rgba(32, 32, 32, 0.3) 50%,
+      rgba(31, 30, 30, 0.7) 75%,
+      rgba(17, 17, 17, 0.7) 100%
     );
   }
 </style>
