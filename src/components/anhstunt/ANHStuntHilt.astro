@@ -1,0 +1,41 @@
+---
+import ANHStuntBlade from "./ANHStuntBlade.astro";
+import ANHStuntBooster from "./ANHStuntBooster.astro";
+import ANHStuntClamp from "./ANHStuntClamp.astro";
+import ANHStuntEmitter from "./ANHStuntEmitter.astro";
+import ANHStuntGrenade from "./ANHStuntGrenade.astro";
+import ANHStuntNeck from "./ANHStuntNeck.astro";
+import ANHStuntPommel from "./ANHStuntPommel.astro";
+---
+
+<div id="hilt" class="hilt">
+  <button id="power-btn" autofocus></button>
+  <ANHStuntBlade />
+  <ANHStuntEmitter />
+  <ANHStuntNeck />
+  <ANHStuntGrenade />
+  <ANHStuntClamp />
+  <ANHStuntBooster />
+  <ANHStuntPommel />
+</div>
+
+<style>
+  .hilt {
+    position: relative;
+    max-height: 275mm;
+    height: 100%;
+    aspect-ratio: 53 / 280;
+    transition: 0.5s;
+  }
+
+  #power-btn {
+    position: absolute;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+  }
+</style>

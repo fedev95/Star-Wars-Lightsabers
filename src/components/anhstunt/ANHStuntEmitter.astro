@@ -1,0 +1,118 @@
+<section>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</section>
+
+<style>
+  section {
+    --black: linear-gradient(
+      90deg,
+      rgb(35, 36, 39) 0%,
+      rgb(56, 59, 65) 25%,
+      rgb(82, 85, 97) 34%,
+      rgb(34, 34, 37) 53%,
+      rgb(20, 21, 22) 100%
+    );
+
+    --chrome: linear-gradient(
+      90deg,
+      rgb(131, 127, 122) 0%,
+      rgb(151, 145, 139) 6%,
+      rgba(43, 37, 28, 1) 11%,
+      rgba(47, 42, 36, 1) 16%,
+      rgba(109, 95, 84, 1) 24%,
+      rgba(235, 235, 231, 1) 35%,
+      rgba(227, 227, 223, 1) 43%,
+      rgba(97, 90, 88, 1) 52%,
+      rgb(32, 32, 31) 66%,
+      rgba(73, 68, 62, 1) 80%,
+      rgba(176, 172, 166, 1) 85%,
+      rgba(97, 95, 91, 1) 96%,
+      rgba(45, 44, 43, 1) 100%
+    );
+
+    height: 9.29%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section > div:nth-child(1) {
+    height: 30.77%;
+    width: 33.96%;
+    top: -30.77%;
+    background: var(--chrome);
+    position: absolute;
+  }
+
+  section > div:nth-child(2) {
+    height: 3.85%;
+    width: 100%;
+    background: var(--black);
+  }
+
+  section > div:nth-child(3) {
+    height: 23.08%;
+    width: 77.36%;
+    background: var(--black);
+    position: relative;
+  }
+
+  section > div:nth-child(3)::before {
+    opacity: 0.8;
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(17, 14, 11, 0.2) 23%,
+      rgba(45, 44, 43, 0) 100%
+    );
+  }
+
+  section > div:nth-child(4) {
+    height: 53.85%;
+    width: 67.92%;
+    background: var(--black);
+    position: relative;
+  }
+
+  section > div:nth-child(4)::before {
+    opacity: 0.7;
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(17, 14, 11, 0.2) 43%,
+      rgba(45, 44, 43, 0) 100%
+    );
+  }
+
+  section > div:nth-child(5) {
+    height: 19.23%;
+    width: 49.06%;
+    background: var(--black);
+    position: relative;
+  }
+
+  section > div:nth-child(5)::before {
+    opacity: 0.7;
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(17, 14, 11, 0.3) 75%,
+      rgba(45, 44, 43, 0) 100%
+    );
+  }
+</style>
