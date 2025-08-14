@@ -212,14 +212,35 @@
     top: 100%;
     left: 10%;
     border-radius: 9999px;
-    background: rgb(19, 18, 18, 0.8);
+    background: rgba(153, 149, 149, 0.8);
+  }
+
+  .line-hole::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    height: 30%;
+    width: 90%;
+    top: 100%;
+    left: 10%;
+    border-radius: 9999px;
+    background: rgba(43, 41, 41, 0.8);
   }
 
   .square-hole {
     height: 100%;
     min-width: 10%;
-    background: rgba(19, 18, 18, 0.8);
+    background: rgba(163, 160, 160, 0.8);
     border-radius: 10%;
+    position: relative;
+  }
+
+  .square-hole::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: rgb(53, 51, 51);
   }
 
   .clamp-lines {
