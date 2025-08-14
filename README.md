@@ -11,7 +11,7 @@
 |----------|----------|
 | ![](public/kenobi_anh.jpg) | ![](public/luke_esb.jpg) |
 
-| Darth Vader ESB | Luke Skywalker ROTJ V2 |
+| Darth Vader ESB | ANH Stunt - ROTJ V2/V3 |
 |----------|----------|
 | ![](public/vader_esb.jpg) | ![](public/luke_rotj_v2.jpg) |
 
