@@ -1,0 +1,41 @@
+---
+import ROTJV3Blade from "./ROTJV3Blade.astro";
+import ROTJV3Booster from "./ROTJV3Booster.astro";
+import ROTJV3Clamp from "./ROTJV3Clamp.astro";
+import ROTJV3Emitter from "./ROTJV3Emitter.astro";
+import ROTJV3Grenade from "./ROTJV3Grenade.astro";
+import ROTJV3Neck from "./ROTJV3Neck.astro";
+import ROTJV3Pommel from "./ROTJV3Pommel.astro";
+---
+
+<div id="hilt" class="hilt">
+  <button id="power-btn" autofocus></button>
+  <ROTJV3Blade />
+  <ROTJV3Emitter />
+  <ROTJV3Neck />
+  <ROTJV3Grenade />
+  <ROTJV3Clamp />
+  <ROTJV3Booster />
+  <ROTJV3Pommel />
+</div>
+
+<style>
+  .hilt {
+    position: relative;
+    max-height: 275mm;
+    height: 100%;
+    aspect-ratio: 53 / 280;
+    transition: 0.5s;
+  }
+
+  #power-btn {
+    position: absolute;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+  }
+</style>

@@ -1,0 +1,229 @@
+---
+let grenadeThreads = new Array(8).fill("");
+---
+
+<section>
+  <div class="grenade-container">
+    <div class="grenade-top">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    {
+      grenadeThreads.map(() => (
+        <div class="grenade-thread">
+          <div />
+          <div />
+          <div />
+        </div>
+      ))
+    }
+    <div class="grenade-bot">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    --chrome: linear-gradient(
+      90deg,
+      rgb(131, 127, 122) 0%,
+      rgb(151, 145, 139) 6%,
+      rgba(43, 37, 28, 1) 11%,
+      rgba(47, 42, 36, 1) 16%,
+      rgba(109, 95, 84, 1) 24%,
+      rgba(235, 235, 231, 1) 35%,
+      rgba(227, 227, 223, 1) 43%,
+      rgba(97, 90, 88, 1) 52%,
+      rgb(32, 32, 31) 66%,
+      rgba(73, 68, 62, 1) 80%,
+      rgba(176, 172, 166, 1) 85%,
+      rgba(97, 95, 91, 1) 96%,
+      rgba(45, 44, 43, 1) 100%
+    );
+
+    --black: linear-gradient(
+      90deg,
+      rgba(18, 18, 18, 1) 0%,
+      rgb(37, 37, 37) 25%,
+      rgb(48, 47, 47) 34%,
+      rgb(20, 20, 20) 53%,
+      rgb(14, 13, 13) 100%
+    );
+
+    height: 31.07%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .grenade-container {
+    width: 67.92%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .grenade-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 80%;
+    left: 50%;
+    translate: -50%;
+    background: var(--black);
+  }
+
+  .grenade-top {
+    height: 12%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .grenade-top > div:nth-child(1) {
+    height: 47.89%;
+    background: var(--chrome);
+    position: relative;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  }
+
+  .grenade-top > div:nth-child(1)::before {
+    inset: 0;
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      rgba(13, 9, 6, 0.3) 0%,
+      rgba(17, 14, 11, 0.6) 23%,
+      rgba(21, 19, 16, 0.2) 44%,
+      rgba(27, 26, 23, 0.3) 59%,
+      rgba(24, 23, 23, 0.4) 62%,
+      rgb(27, 27, 27, 0.8) 100%
+    );
+  }
+
+  .grenade-top > div:nth-child(2) {
+    height: 22%;
+    background: var(--chrome);
+  }
+
+  .grenade-top > div:nth-child(3) {
+    height: 23.37%;
+    background: rgb(17, 17, 17);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  }
+
+  .grenade-thread {
+    width: 100%;
+    height: 9.06%;
+    z-index: 1;
+  }
+
+  .grenade-thread > div:nth-child(2n + 1) {
+    height: 30.96%;
+    background: var(--black);
+  }
+
+  .grenade-thread > div:nth-child(1) {
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  }
+
+  .grenade-thread > div:nth-child(2) {
+    height: 30%;
+    background: var(--chrome);
+    clip-path: polygon(
+      0 0,
+      46% 0,
+      49% 13%,
+      51% 26%,
+      55% 40%,
+      59% 40%,
+      59% 24%,
+      59% 5%,
+      60% 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+  }
+
+  .grenade-thread > div:nth-child(3) {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    background: rgb(17, 17, 17);
+  }
+
+  .grenade-bot {
+    height: 15.45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .grenade-bot > div:nth-child(1) {
+    height: 18.15%;
+    width: 100%;
+    background: var(--black);
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  }
+
+  .grenade-bot > div:nth-child(2) {
+    height: 52.08%;
+    width: 100%;
+    background: var(--black);
+    position: relative;
+  }
+
+  .grenade-bot > div:nth-child(2)::before {
+    content: "";
+    inset: 0;
+    background: var(--chrome);
+    position: absolute;
+    clip-path: polygon(
+      0 0,
+      46% 0,
+      49% 13%,
+      51% 26%,
+      55% 40%,
+      59% 40%,
+      59% 24%,
+      59% 5%,
+      60% 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+  }
+
+  .grenade-bot > div:nth-child(2)::after {
+    opacity: 0.6;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(17, 14, 11, 0) 23%,
+      rgba(21, 19, 16, 0.2) 44%,
+      rgba(27, 26, 23, 0.5) 59%,
+      rgba(24, 23, 23, 0.6) 62%,
+      rgb(17, 17, 17) 100%
+    );
+  }
+
+  .grenade-bot > div:nth-child(3) {
+    height: 29.76%;
+    width: 104%;
+    background: var(--black);
+    position: relative;
+    clip-path: polygon(2% 0%, 98% -0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+  }
+</style>
